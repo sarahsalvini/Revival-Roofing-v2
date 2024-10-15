@@ -1,12 +1,12 @@
 <script>
 </script>
 
-<section class="bg-white dark:bg-gray-900">
+<section class="bg-navy">
 	<div
 		class="py-8 px-4 mx-auto max-w-screen-md min-h-screen text-center lg:py-16 lg:px-12 content-center"
 	>
 		<svg
-			class="mx-auto mb-4 w-10 h-10 text-gray-400"
+			class="mx-auto mb-4 w-10 h-10 text-white"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 512 512"
 			><path
@@ -19,7 +19,7 @@
 		>
 			Under Maintenance
 		</h1>
-		<p class="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
+		<p class="font-light text-white md:text-lg xl:text-xl dark:text-gray-400">
 			Our team is performing scheduled maintenance. We'll be back shortly.
 		</p>
 	</div>
