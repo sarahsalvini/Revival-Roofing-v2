@@ -12,7 +12,7 @@
 	}
 
 	:root {
-		@apply font-gotham font-montserrat antialiased;
+		@apply font-gotham font-montserrat antialiased tracking-wide;
 	}
 
 	@font-face {
