@@ -24,11 +24,11 @@
 		</p>
 	</div>
 	<!-- ecg -->
-	<div class="w-full h-screen bg-gray-100 flex items-center justify-center">
+	<div class="w-full bg-gray-100 flex items-center justify-center absolute" style="top: 85%">
 		<svg
-			class="w-full h-auto"
+			class="w-full h-auto absolute"
 			id="Layer_1"
-			viewBox="0 0 792 612"
+			viewBox="0 0 792 200"
 			preserveAspectRatio="xMidYMid meet"
 			xmlns="http://www.w3.org/2000/svg"
 			xml:space="preserve"
