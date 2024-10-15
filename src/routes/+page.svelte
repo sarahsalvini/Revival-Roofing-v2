@@ -23,4 +23,40 @@
 			Our team is performing scheduled maintenance. We'll be back shortly.
 		</p>
 	</div>
+	<!-- ecg -->
+	<div class="w-full h-screen bg-gray-100 flex items-center justify-center">
+		<svg
+			class="w-full h-auto"
+			id="Layer_1"
+			viewBox="0 0 792 612"
+			preserveAspectRatio="xMidYMid meet"
+			xmlns="http://www.w3.org/2000/svg"
+			xml:space="preserve"
+		>
+			<defs>
+				<!-- Define the glow effect -->
+				<filter id="glow">
+					<feDropShadow dx="0" dy="0" stdDeviation=".5" flood-color="#B8E3E9" flood-opacity="1" />
+					<feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#B8E3E9" flood-opacity="0.8" />
+					<feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#B8E3E9" flood-opacity="0.5" />
+				</filter>
+			</defs>
+			<g id="Layer_2">
+				<path
+					class="kiwi path"
+					style="fill:none;stroke:#B8E3E9;stroke-width:2;filter:url(#glow);"
+					d="M17.902,114.475h26.949c2.296,0,12.876-10.182,20.063-10.182
+                c7.186,0,10.83,10.182,12.576,10.182h18.266l7.187,10.779l7.485-100.91l5.091,114.984l6.887-24.554h24.41
+                c3.239,0,14.816-16.769,20.206-16.769s11.08,16.47,13.475,16.47c2.845,0,26.665,0,26.665,0l27.757,0
+                c2.296,0,12.875-10.181,20.062-10.181c7.186,0,10.831,10.181,12.577,10.181h18.266l7.187,10.779l7.485-100.91l5.091,114.984
+                l6.888-24.555h24.41c3.24,0,14.817-16.768,20.207-16.768s11.079,16.469,13.474,16.469c2.845,0,26.666,0,26.666,0h27.813
+                c2.297,0,12.877-10.181,20.063-10.181s10.829,10.181,12.576,10.181h18.265l7.188,10.779l7.485-100.91l5.091,114.984
+                l6.887-24.555h24.409c3.238,0,14.816-16.768,20.206-16.768s11.08,16.469,13.476,16.469c2.845,0,26.664,0,26.664,0h27.815
+                c2.296,0,12.875-10.181,20.063-10.181c7.187,0,10.829,10.181,12.576,10.181h18.265l7.188,10.779l7.486-100.91l5.091,114.984
+                l6.887-24.555h24.409c3.238,0,14.816-16.768,20.206-16.768s11.079,16.469,13.476,16.469c2.846,0,26.664,0,26.664,0"
+				/>
+			</g>
+		</svg>
+	</div>
+	<!-- ---- -->
 </section>

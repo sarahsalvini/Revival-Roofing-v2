@@ -285,3 +285,29 @@
 		font-style: italic;
 	}
 }
+
+@layer utilities {
+	@keyframes draw {
+		from {
+			stroke-dashoffset: 10000;
+		}
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	.path {
+		stroke-dasharray: 2000;
+		stroke-dashoffset: 4000;
+		animation: draw 80s linear infinite;
+	}
+}

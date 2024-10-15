@@ -23,7 +23,15 @@ export default {
 				gotham: ['Gotham', 'sans-serif'],
 				montserrat: ['Montserrat', 'sans-serif']
 			},
-			keyframes: {}
+			keyframes: {
+				scroll: {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(-100%)' }
+				}
+			},
+			animation: {
+				'scroll-line': 'scroll 5s linear infinite'
+			}
 		}
 	},
 	plugins: []
