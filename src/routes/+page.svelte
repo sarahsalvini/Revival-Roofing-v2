@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section class="bg-navy">
+<section class="bg-dark">
 	<div
 		class="py-8 px-4 mx-auto max-w-screen-md min-h-screen text-center lg:py-16 lg:px-12 content-center"
 	>
@@ -24,7 +24,7 @@
 		</p>
 	</div>
 	<!-- ecg -->
-	<div class="w-full bg-gray-100 flex items-center justify-center absolute" style="top: 85%">
+	<!-- <div class="w-full bg-gray-100 flex items-center justify-center absolute" style="top: 85%">
 		<svg
 			class="w-full h-auto absolute"
 			id="Layer_1"
@@ -34,7 +34,6 @@
 			xml:space="preserve"
 		>
 			<defs>
-				<!-- Define the glow effect -->
 				<filter id="glow">
 					<feDropShadow dx="0" dy="0" stdDeviation=".5" flood-color="#B8E3E9" flood-opacity="1" />
 					<feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#B8E3E9" flood-opacity="0.8" />
@@ -57,6 +56,6 @@
 				/>
 			</g>
 		</svg>
-	</div>
+	</div> -->
 	<!-- ---- -->
 </section>
