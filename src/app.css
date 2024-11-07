@@ -10,6 +10,9 @@
 	.font-montserrat {
 		font-family: 'Montserrat', sans-serif;
 	}
+	body {
+		@apply bg-white dark:bg-black text-black dark:text-white text-center;
+	}
 
 	h1,
 	h2,
@@ -397,7 +400,7 @@
 }
 
 .btn-primary {
-	@apply uppercase tracking-wider rounded-lg bg-primary text-navy hover:drop-shadow-sm;
+	@apply uppercase tracking-wider rounded-lg bg-navy text-powder dark:bg-primary dark:text-navy hover:drop-shadow-sm;
 }
 
 .btn-secondary {

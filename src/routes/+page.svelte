@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section class="bg-dark">
+<section class="bg-white dark:bg-dark">
 	<div
 		class="py-8 px-4 mx-auto max-w-screen-md min-h-screen text-center lg:py-16 lg:px-12 content-center"
 	>

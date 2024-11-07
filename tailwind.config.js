@@ -6,13 +6,17 @@ export default {
 		colors: {
 			// Main theme colors
 			black: '#000000',
-			white: '#DEDEDE',
+			white: '#FFFFFF',
 			transparent: 'transparent',
 			// Accent colors
 			powder: '#B8E3E9', // Soft, cool accent color
 			primary: '#B8E3E9', // Set primary to powder for consistency
 			secondary: '#A9D6DC', // Slightly darker shade of powder, optional
 			navy: '#202B3D',
+			manatee: '#989AA2',
+			mercury: '#E1E1E1',
+			'white-smoke': '#F0F0F0',
+			bone: '#F9F9F9',
 			// Neutral colors for text and backgrounds
 			gray: {
 				100: '#F3F4F6',
