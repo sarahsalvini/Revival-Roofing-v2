@@ -51,10 +51,23 @@ export default {
 		},
 
 		extend: {
-			dropShadow: {
-				'glow-light': '0 4px 6px #B8E3E9', // Original color glow
-				'glow-dark': '0 0 15px 3px #A5CCD1'
+			boxShadow: {
+				'dark-right-sm': '1px -1px 2px 0 rgba(13, 17, 23, 0.05)',
+				'dark-right': '3px -1px 3px 0 rgba(13, 17, 23, 0.1)',
+				'dark-right-md': '6px -4px 6px -1px rgba(13, 17, 23, 0.2)',
+				'dark-right-lg': '15px -10px 15px -3px rgba(13, 17, 23, 0.4)',
+				'dark-right-xl': '25px -20px 25px -5px rgba(13, 17, 23, 0.6)',
+				'dark-right-2xl': '50px -25px 50px -12px rgba(13, 17, 23, 0.8)',
+
+				// Powder Right shadows
+				'powder-right-sm': '1px -1px 2px 0 rgba(184, 227, 233, 0.05)',
+				'powder-right': '3px -1px 3px 0 rgba(184, 227, 233, 0.1)',
+				'powder-right-md': '6px -4px 6px -1px rgba(184, 227, 233, 0.1)',
+				'powder-right-lg': '15px -10px 15px -3px rgba(184, 227, 233, 0.1)',
+				'powder-right-xl': '25px -20px 25px -5px rgba(184, 227, 233, 0.1)',
+				'powder-right-2xl': '50px -25px 50px -12px rgba(184, 227, 233, 0.25)'
 			},
+
 			fontFamily: {
 				gotham: ['Gotham', 'sans-serif'],
 				montserrat: ['Montserrat', 'sans-serif']

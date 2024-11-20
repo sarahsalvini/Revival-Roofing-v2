@@ -11,13 +11,15 @@
 		font-family: 'Montserrat', sans-serif;
 	}
 	body {
-		@apply bg-white dark:bg-black text-black dark:text-white text-center;
+		@apply bg-white dark:bg-dark-4 text-dark dark:text-white text-center;
 	}
 
 	h1,
 	h2,
 	h3 {
 		font-family: 'Gotham', sans-serif;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
 	}
 
 	h4,
@@ -29,11 +31,11 @@
 	div,
 	span {
 		font-family: 'Montserrat', sans-serif;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.1em;
 	}
 
 	:root {
-		@apply font-gotham font-montserrat antialiased tracking-wide;
+		@apply font-gotham font-montserrat antialiased tracking-wide text-navy dark:text-white;
 	}
 
 	@font-face {
@@ -352,72 +354,6 @@
 	background-color: #1a1f24; /* Slightly darker shade on hover */
 }
 
-.desktop {
-	position: relative;
-	background-color: #222731;
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-.desktop::before,
-.desktop::after {
-	content: '';
-	position: absolute;
-	width: 19px;
-	height: 26px;
-	border-radius: 50%;
-	background-color: #0d1117;
-}
-
-/* Top-left crescent */
-.desktop::before {
-	top: 7px;
-	left: -21px;
-	rotate: -45deg;
-	box-shadow: 7px 0 0 #222731;
-}
-
-/* Top-right crescent */
-.desktop::after {
-	top: 6px;
-	right: -22px;
-	box-shadow: -7px 0 0 #222731;
-	rotate: 50deg;
-}
-
-.whiteDesktop {
-	position: relative;
-	background-color: #222731;
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-.whiteDesktop::before,
-.whiteDesktop::after {
-	content: '';
-	position: absolute;
-	width: 19px;
-	height: 26px;
-	border-radius: 50%;
-	background-color: #fff;
-}
-
-/* Top-left crescent */
-.whiteDesktop::before {
-	top: 7px;
-	left: -21px;
-	rotate: -45deg;
-	box-shadow: 8px 0 0 #222731;
-}
-
-/* Top-right crescent */
-.whiteDesktop::after {
-	top: 6px;
-	right: -22px;
-	box-shadow: -7px 0 0 #222731;
-	rotate: 50deg;
-}
-
 .navbarTogglerActive > span:nth-child(1) {
 	@apply translate-y-[10px] rotate-45 opacity-90 transition-all duration-500 ease-in-out;
 }
@@ -435,7 +371,7 @@
 }
 
 .btn-primary {
-	@apply uppercase tracking-wider rounded-lg bg-dark-4 dark:bg-primary text-powder dark:text-navy hover:bg-dark hover:shadow-dark-6/60 hover:shadow-dark-6 hover:shadow-md;
+	@apply uppercase tracking-wider rounded-lg bg-dark-4 dark:bg-primary text-powder dark:text-navy hover:bg-dark hover:shadow-dark-6/60  hover:shadow-md;
 }
 
 .btn-secondary {

@@ -12,7 +12,7 @@
 
 <!-- COMMENT OUT NAV WHEN PUSHING -->
 
-<!-- <div class="sticky top-0 z-20 bg-white dark:bg-dark">
+<!-- <div class="sticky top-0 z-20 bg-white dark:bg-dark-4">
 	<div
 		class="flex items-end justify-end gap-8 pr-12 lg:pr-0 sm:flex lg:pr-0 whitespace-nowrap bg-transparent"
 	>

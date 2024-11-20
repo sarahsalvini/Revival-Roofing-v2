@@ -17,7 +17,7 @@
 	}
 </script>
 
-<div class="p-4 bg-white dark:bg-dark">
+<div class="p-4">
 	<input checked={darkMode} on:click={handleSwitchDarkMode} type="checkbox" id="theme-toggle" />
 	<label for="theme-toggle" class="inline-flex items-center justify-center">
 		{#if !darkMode}

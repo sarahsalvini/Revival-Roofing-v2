@@ -1,4 +1,5 @@
-<script></script>
+<script>
+</script>
 
 <div class="block dark:hidden">
 	<svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">

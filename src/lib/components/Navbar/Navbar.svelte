@@ -44,7 +44,7 @@
 
 <svelte:window bind:innerWidth={w} />
 
-<div class="bg-white dark:bg-dark {showMegaMenu ? 'lg:border-b-8 lg:border-dark-4' : ''}">
+<div class="bg-white dark:bg-dark-4">
 	<div class="container">
 		<div class="relative flex items-center justify-between">
 			<div class="xl:w-full w-80 max-w-full">
@@ -143,17 +143,17 @@
 												class:hidden={!showMegaMenu}
 												class:desktop={!isMobile && darkMode}
 												class:whiteDesktop={!isMobile && !darkMode}
-												class="w-full rounded-xl lg:rounded-t-none bg-dark-4 p-2 xl:w-[750px] lg:w-[650px] lg:p-8 shadow-2xl"
+												class="w-full rounded-xl lg:dark:bg-dark-4 lg:bg-bone bg-dark-4 p-2 xl:w-[750px] lg:w-[650px] lg:p-8 lg:border-t-[12px] lg:dark:border-powder lg:border-navy dark:shadow-powder/10 shadow-md"
 											>
 												<!-- Inner submenu list wrapper -->
 												<div
-													class="grid gap-5 lg:grid-cols-2 lg:bg-dark lg:rounded-xl drop-shadow-2xl"
+													class="grid gap-5 lg:grid-cols-2 lg:dark:bg-dark lg:bg-powder/50 lg:rounded-xl drop-shadow-2xl dark:shadow-dark shadow-lg"
 												>
 													{#each service.submenu as submenu}
 														<div class="space-y-2 text-left">
 															<a
 																href={submenu.link}
-																class="group flex flex-col gap-4 rounded-lg p-4 duration-200 lg:flex-row text-white hover:text-powder"
+																class="group flex flex-col gap-4 rounded-lg p-4 duration-200 lg:flex-row text-white lg:dark:text-white lg:text-navy hover:text-powder dark:hover:text-powder lg:hover:text-[#3A94A8]"
 															>
 																<div class="">
 																	<i class={submenu.icon} />
