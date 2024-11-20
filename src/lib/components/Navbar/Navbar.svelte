@@ -96,14 +96,23 @@
 						id="navbarToggler"
 						class="absolute right-0 top-1/2 block -translate-y-1/2 rounded-lg md:px-3 py-[6px] lg:hidden"
 					>
-						<span class="relative my-[6px] block h-[2px] w-[30px] bg-navy dark:bg-white"></span>
-						<span class="relative my-[6px] block h-[2px] w-[30px] bg-navy dark:bg-white"></span>
-						<span class="relative my-[6px] block h-[2px] w-[30px] bg-navy dark:bg-white"></span>
+						<span
+							class="relative my-[6px] block h-[2px] w-[30px] bg-navy dark:bg-white transition-all duration-500 ease-in-out opacity-100
+    {navbarOpen ? 'translate-y-[10px] rotate-45' : ''}"
+						></span>
+						<span
+							class="relative my-[6px] block h-[2px] w-[30px] bg-navy dark:bg-white transition-opacity duration-500 ease-in-out
+    {navbarOpen ? 'opacity-0' : ''}"
+						></span>
+						<span
+							class="relative my-[6px] block h-[2px] w-[30px] bg-navy dark:bg-white transition-all duration-500 ease-in-out opacity-100
+    {navbarOpen ? '-translate-y-[10px] rotate-[-45deg]' : ''}"
+						></span>
 					</button>
 					<nav
 						class:hidden={!navbarOpen}
 						id="navbarCollapse"
-						class="absolute right-0 sm:right-4 top-full w-full max-h-[80vh] flex-shrink-0 sm:max-h-[100vh] sm:overflow-visible overflow-y-auto max-w-[300px] rounded-lg px-6 py-5 shadow lg:px-0 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none bg-dark-2 lg:bg-transparent"
+						class="absolute right-0 sm:right-4 top-full w-full max-h-[80vh] flex-shrink-0 lg:max-h-[100vh] lg:overflow-visible overflow-y-auto max-w-[300px] rounded-lg px-6 py-5 shadow lg:px-0 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none bg-dark-2 lg:bg-transparent"
 					>
 						<ul class="block lg:flex justify-end gap-6 relative">
 							{#each serviceList as service}
