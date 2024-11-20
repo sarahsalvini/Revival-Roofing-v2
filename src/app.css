@@ -373,7 +373,7 @@
 	top: 7px;
 	left: -21px;
 	rotate: -45deg;
-	box-shadow: 6px 0 0 #222731;
+	box-shadow: 7px 0 0 #222731;
 }
 
 /* Top-right crescent */
@@ -383,6 +383,40 @@
 	box-shadow: -7px 0 0 #222731;
 	rotate: 50deg;
 }
+
+.whiteDesktop {
+	position: relative;
+	background-color: #222731;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.whiteDesktop::before,
+.whiteDesktop::after {
+	content: '';
+	position: absolute;
+	width: 19px;
+	height: 26px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+/* Top-left crescent */
+.whiteDesktop::before {
+	top: 7px;
+	left: -21px;
+	rotate: -45deg;
+	box-shadow: 8px 0 0 #222731;
+}
+
+/* Top-right crescent */
+.whiteDesktop::after {
+	top: 6px;
+	right: -22px;
+	box-shadow: -7px 0 0 #222731;
+	rotate: 50deg;
+}
+
 .navbarTogglerActive > span:nth-child(1) {
 	@apply top-[7px] rotate-45;
 }
@@ -400,7 +434,7 @@
 }
 
 .btn-primary {
-	@apply uppercase tracking-wider rounded-lg bg-navy text-powder dark:bg-primary dark:text-navy hover:drop-shadow-sm;
+	@apply uppercase tracking-wider rounded-lg bg-dark-4 dark:bg-primary text-powder dark:text-navy hover:bg-dark hover:shadow-dark-6/60 hover:shadow-dark-6 hover:shadow-md;
 }
 
 .btn-secondary {

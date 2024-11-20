@@ -1,10 +1,10 @@
 <script>
-	let navbarOpen = false;
-	let navbarTogglerActive = false;
+	import DecrotiveSquareDots from '../DecrotiveSquareDots/DecrotiveSquareDots.svelte';
+	import HeroForm from '../HeroForm/HeroForm.svelte';
 </script>
 
 <!-- ====== Hero Section Start -->
-<div class="relative bg-navy pb-[110px] pt-[120px] lg:pt-[150px]">
+<div class="relative bg-white dark:bg-dark pb-[110px] pt-[120px] lg:pt-[150px]">
 	<div class="container mx-auto">
 		<div class="-mx-4 flex flex-wrap items-center">
 			<div class="w-full px-4 lg:w-5/12">
@@ -22,12 +22,7 @@
 					</p>
 					<ul class="flex flex-wrap items-center">
 						<li>
-							<a
-								href="javascript:void(0)"
-								class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-center text-base font-medium text-navy hover:bg-blue-dark lg:px-7"
-							>
-								Get Started
-							</a>
+							<a href="javascript:void(0)" class="btn-primary btn-large"> Get Started </a>
 						</li>
 						<li>
 							<a
@@ -79,9 +74,11 @@
 				<div class="lg:ml-auto lg:text-right">
 					<div class="relative z-10 inline-block pt-11 lg:pt-0">
 						<!-- Add Form Here instead of image -->
-						<img src="/hero-image-01.png" alt="hero" class="max-w-full lg:ml-auto" />
+						<!-- <img src="/hero-image-01.png" alt="hero" class="max-w-full lg:ml-auto" /> -->
+						<HeroForm />
 						<span class="absolute -bottom-8 -left-8 z-[-1]">
-							<svg
+							<DecrotiveSquareDots />
+							<!-- <svg
 								width="93"
 								height="93"
 								viewBox="0 0 93 93"
@@ -113,7 +110,7 @@
 								<circle cx="90.5" cy="46.5" r="2.5" fill="#3056D3" />
 								<circle cx="90.5" cy="68.5" r="2.5" fill="#3056D3" />
 								<circle cx="90.5" cy="90.5" r="2.5" fill="#3056D3" />
-							</svg>
+							</svg> -->
 						</span>
 					</div>
 				</div>

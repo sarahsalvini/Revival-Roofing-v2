@@ -39,8 +39,22 @@ export default {
 			'dark-5': '#2A2F37', // A slightly lighter tone for highlighted sections
 			'dark-6': '#313640' // Lightest shade in the dark family, ideal for subtle backgrounds or borders
 		},
+		container: {
+			center: true, // Ensures the container is centered
+			padding: {
+				DEFAULT: '1rem', // Default padding for all breakpoints
+				sm: '1rem', // Padding for small screens and above
+				md: '1rem', // Padding for medium screens and above
+				lg: '2rem', // Padding for large screens and above
+				xl: '4rem' // Padding for extra-large screens and above
+			}
+		},
 
 		extend: {
+			dropShadow: {
+				'glow-light': '0 4px 6px #B8E3E9', // Original color glow
+				'glow-dark': '0 0 15px 3px #A5CCD1'
+			},
 			fontFamily: {
 				gotham: ['Gotham', 'sans-serif'],
 				montserrat: ['Montserrat', 'sans-serif']

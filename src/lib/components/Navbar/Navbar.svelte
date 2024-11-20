@@ -1,5 +1,4 @@
 <script>
-	import ColorModeToggle from '../ColorModeToggle/ColorModeToggle.svelte';
 	export let darkMode = true;
 	const serviceList = [
 		{
@@ -44,17 +43,12 @@
 </script>
 
 <svelte:window bind:innerWidth={w} />
-<!-- ====== Mega Menu Start -->
 
-<div
-	class="bg-white dark:bg-dark {showMegaMenu
-		? 'lg:border-b-8 lg:border-bone dark:lg:border-dark-4'
-		: ''}"
->
-	<div class="container mx-auto">
-		<div class="relative -mx-4 flex items-center justify-between">
-			<div class="w-80 max-w-full">
-				<a href="javascript:void(0)" class="block w-full py-5 px-3 lg:px-0">
+<div class="bg-white dark:bg-dark {showMegaMenu ? 'lg:border-b-8 lg:border-dark-4' : ''}">
+	<div class="container">
+		<div class="relative flex items-center justify-between">
+			<div class="xl:w-full w-80 max-w-full">
+				<a href="/" class="block w-full lg:max-w-[300px] py-5 lg:py-0">
 					{#if darkMode}
 						<img
 							src="/logos/main_logo/Classic_Bevel_White.svg"
@@ -80,13 +74,12 @@
 					{/if}
 				</a>
 			</div>
-			<div class=" w-full items-center justify-between px-4">
-				<!-- <ColorModeToggle /> -->
+			<div class=" w-full items-center justify-between">
 				<div class="lg:pt-5">
 					<div
 						class="items-center justify-end gap-8 pr-12 lg:pr-0 sm:flex lg:pr-0 whitespace-nowrap"
 					>
-						<div>
+						<div class="px-6 lg:px-0 hidden sm:block">
 							<h4
 								class="text-navy font-semibold text-sm md:text-base lg:text-2xl tracking-wider text-right dark:text-white"
 							>
@@ -101,7 +94,7 @@
 						on:click={toggleNavbar}
 						class:navbarTogglerActive={navbarOpen}
 						id="navbarToggler"
-						class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+						class="absolute right-0 top-1/2 block -translate-y-1/2 rounded-lg md:px-3 py-[6px] lg:hidden"
 					>
 						<span class="relative my-[6px] block h-[2px] w-[30px] bg-navy dark:bg-white"></span>
 						<span class="relative my-[6px] block h-[2px] w-[30px] bg-navy dark:bg-white"></span>
@@ -110,15 +103,15 @@
 					<nav
 						class:hidden={!navbarOpen}
 						id="navbarCollapse"
-						class="absolute right-4 top-full w-full max-w-[300px] rounded-lg px-6 py-5 shadow lg:px-0 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none bg-bone lg:bg-transparent"
+						class="absolute right-0 sm:right-4 top-full w-full max-h-[80vh] flex-shrink-0 sm:max-h-[100vh] sm:overflow-visible overflow-y-auto max-w-[300px] rounded-lg px-6 py-5 shadow lg:px-0 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none bg-dark-2 lg:bg-transparent"
 					>
-						<ul class="block lg:flex justify-end">
+						<ul class="block lg:flex justify-end gap-6 relative">
 							{#each serviceList as service}
 								{#if service.submenu && service.submenu?.length}
-									<li class="relative">
+									<li>
 										<button
 											on:click={toggleMegaMenu}
-											class="uppercase tracking-wide font-semibold flex w-full items-center justify-between gap-2 py-2 text-base lg:ml-12 lg:inline-flex lg:w-auto lg:justify-center tw-text-dark dark:text-white dark:hover:text-powder hover:text-dark-6"
+											class="uppercase tracking-wide font-semibold flex w-full items-center justify-between gap-2 py-2 text-base lg:inline-flex lg:w-auto lg:justify-center lg:text-dark text-white dark:text-white hover:text-powder dark:hover:text-powder"
 										>
 											{service.title}
 											<span class:-scale-y-100={showMegaMenu} class="duration-200">
@@ -136,39 +129,42 @@
 												</svg>
 											</span>
 										</button>
-
-										<div
-											class:hidden={!showMegaMenu}
-											class:desktop={!isMobile && darkMode}
-											class="w-full rounded-xl lg:rounded-t-none bg-bone dark:bg-dark-4 p-2 lg:absolute lg:left-0 lg:top-[150%] lg:w-[850px] lg:p-8 shadow-2xl"
-										>
-											<!-- Inner submenu list wrapper -->
+										<div class="lg:absolute lg:left-0 lg:top-[60px]">
 											<div
-												class="grid gap-5 lg:grid-cols-2 lg:bg-mercury dark:lg:bg-dark lg:rounded-xl drop-shadow-2xl"
+												class:hidden={!showMegaMenu}
+												class:desktop={!isMobile && darkMode}
+												class:whiteDesktop={!isMobile && !darkMode}
+												class="w-full rounded-xl lg:rounded-t-none bg-dark-4 p-2 xl:w-[750px] lg:w-[650px] lg:p-8 shadow-2xl"
 											>
-												{#each service.submenu as submenu}
-													<div class="space-y-2 text-left">
-														<a
-															href={submenu.link}
-															class="group flex flex-col gap-4 rounded-lg p-4 duration-200 lg:flex-row text-dark dark:text-white dark:hover:text-powder hover:text-dark-6"
-														>
-															<div class="">
-																<i class={submenu.icon} />
-															</div>
-															<div>
-																<h3
-																	class="tracking-widest uppercase mb-1 text-sm font-semibold duration-200"
-																>
-																	{submenu.title}
-																</h3>
-																<p class="text-xs">
-																	Lorem Ipsum is simply dummy text of the printing and typesetting
-																	industry.
-																</p>
-															</div>
-														</a>
-													</div>
-												{/each}
+												<!-- Inner submenu list wrapper -->
+												<div
+													class="grid gap-5 lg:grid-cols-2 lg:bg-dark lg:rounded-xl drop-shadow-2xl"
+												>
+													{#each service.submenu as submenu}
+														<div class="space-y-2 text-left">
+															<a
+																href={submenu.link}
+																class="group flex flex-col gap-4 rounded-lg p-4 duration-200 lg:flex-row text-white hover:text-powder"
+															>
+																<div class="">
+																	<i class={submenu.icon} />
+																</div>
+																<div>
+																	<h3
+																		class="tracking-widest uppercase mb-1 text-sm font-semibold duration-200"
+																	>
+																		{submenu.title}
+																	</h3>
+																	<p class="text-xs">
+																		Lorem Ipsum is simply dummy text of the printing and typesetting
+																		industry.
+																	</p>
+																</div>
+															</a>
+														</div>
+													{/each}
+												</div>
+												<!-- --------------------------- -->
 											</div>
 										</div>
 									</li>
@@ -176,7 +172,7 @@
 									<li>
 										<a
 											href={service.link}
-											class="tracking-wider uppercase whitespace-nowrap flex py-2 text-base font-semibold lg:ml-12 lg:inline-flex text-dark dark:text-white dark:hover:text-powder hover:text-dark-6"
+											class="tracking-wider uppercase whitespace-nowrap flex py-2 text-base font-semibold lg:inline-flex text-white lg:text-dark dark:text-white hover:text-powder dark:hover:text-powder"
 										>
 											{service.title}
 										</a>
@@ -190,7 +186,3 @@
 		</div>
 	</div>
 </div>
-
-<style>
-	/* Custom styles if needed */
-</style>
