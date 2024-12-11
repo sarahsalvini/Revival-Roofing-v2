@@ -333,6 +333,10 @@
 		stroke-dashoffset: 4000;
 		animation: draw 80s linear infinite;
 	}
+
+	input {
+		background-color: transparent;
+	}
 }
 
 /* Apply to all scrollbars globally */

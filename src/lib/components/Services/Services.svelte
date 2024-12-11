@@ -22,11 +22,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="-mx-4 flex flex-wrap text-left">
+		<div class="-mx-4 flex flex-wrap text-left gap-y-5">
 			{#each services as service}
 				<div class="w-full px-4 md:w-1/2 lg:w-1/3">
 					<div
-						class="mb-9 rounded-[20px] bg-bone p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10 dark:bg-dark-4 lg:min-h-[420px]"
+						class="mb-9 rounded-[20px] bg-bone p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10 dark:bg-dark-4 lg:min-h-[420px] h-full"
 					>
 						<div
 							class="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-dark-4 text-white dark:bg-powder dark:text-navy"
