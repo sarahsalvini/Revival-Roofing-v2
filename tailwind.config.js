@@ -76,12 +76,58 @@ export default {
 				scroll: {
 					'0%': { transform: 'translateX(100%)' },
 					'100%': { transform: 'translateX(-100%)' }
+				},
+				fadeInDown: {
+					'0%': { opacity: 0, transform: 'translateY(-50px)' },
+					'100%': { opacity: 1, transform: 'translateY(0)' }
 				}
 			},
 			animation: {
-				'scroll-line': 'scroll 5s linear infinite'
+				'scroll-line': 'scroll 5s linear infinite',
+				'fade-in-down': 'fadeInDown 1s ease-out'
 			}
 		}
 	},
-	plugins: []
+	plugins: [
+		function ({ addUtilities }) {
+			addUtilities({
+				// Section One - Clip Path Angle
+				// '.custom-clip-one': {
+				// 	clipPath: 'polygon(0% 0%, 0% 100%, 100% calc(100% - 5vw), 100% 0%)',
+				// 	WebkitClipPath: 'polygon(0% 0%, 0% 100%, 100% calc(100% - 5vw), 100% 0%)'
+				// },
+				'.custom-clip-one': {
+					clipPath: 'polygon(0% 0%, 0% 100%, 100% calc(100% - 5vw), 100% 0%)',
+					WebkitClipPath: 'polygon(0% 0%, 0% 100%, 100% calc(100% - 5vw), 100% 0%)'
+				},
+				// Section Two - Clip Path Full Width Arrow
+				'.custom-clip-two': {
+					clipPath:
+						'polygon(0% 0%, 0% 100%, 0% calc(100% - 5vw), 50% 100%, 100% calc(100% - 5vw), 100% 0%)',
+					WebkitClipPath:
+						'polygon(0% 0%, 0% 100%, 0% calc(100% - 5vw), 50% 100%, 100% calc(100% - 5vw), 100% 0%)'
+				},
+				// Section Three - Border Arrow
+				'.custom-border-arrow': {
+					position: 'relative'
+				},
+				'.custom-border-arrow::after': {
+					position: 'absolute',
+					content: '""',
+					zIndex: '1',
+					bottom: '-25px',
+					borderStyle: 'solid',
+					borderWidth: '25px 50px 0px 50px',
+					borderColor: 'transparent transparent transparent transparent' // Default to transparent
+				},
+				'.bg-mercury.custom-border-arrow::after': {
+					borderTopColor: '#E1E1E1' // Light mode arrow border
+				},
+				// Border for dark mode
+				'.dark .bg-dark-4 .custom-border-arrow::after': {
+					borderTopColor: '#222731' // Dark mode arrow border (example color)
+				}
+			});
+		}
+	]
 };

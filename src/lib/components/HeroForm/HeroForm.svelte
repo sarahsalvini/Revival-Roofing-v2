@@ -16,83 +16,79 @@
 	};
 </script>
 
-<div class="mx-auto max-w-md px-6 py-12 bg-dark-4 border-0 shadow-lg sm:rounded-3xl text-left">
-	<h1 class="text-2xl font-bold mb-8">Form With Floating Labels</h1>
-	<div class="shadow-lg sm:rounded-3xl p-6 bg-dark-2">
-		<form id="form" novalidate>
-			{#each formInputs as input}
-				{#if input.type === 'input'}
-					<div class="relative z-0 w-full mb-5">
-						<input
-							type="text"
-							name="name"
-							placeholder=" "
-							bind:value={data[input.key]}
-							required={input.required}
-							class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 border-gray-200"
-							class:border-red-600={showError}
-						/>
-						<label
-							for="name"
-							class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500 block text-left"
-							class:text-red-600={showError}>{input.title}</label
-						>
-						<span class="text-sm text-red-600" class:hidden={!showError}
-							>{input.title} is required</span
-						>
-					</div>
-				{:else if input.type === 'radio'}
-					<fieldset class="relative z-0 w-full p-px mb-5">
-						<legend
-							class="absolute text-gray-500 transform scale-75 -top-3 origin-0 block text-left"
-							>{input.title}</legend
-						>
-						<div class="block pt-3 pb-2 space-x-4">
-							{#each input.options as option}
-								<label>
-									<input
-										id={option}
-										type="radio"
-										name="{input.key}-{option}"
-										value={option}
-										bind:group={data[input.key]}
-										class="mr-2 text-black border-2 border-gray-300 focus:ring-black"
-									/>
-									{option}
-								</label>
-							{/each}
-						</div>
-					</fieldset>
-				{:else if input.type === 'textarea'}
-					<div class="relative z-0 w-full mb-5">
-						<label
-							for="name"
-							class="absolute duration-300 top-0 -z-1 origin-0 text-gray-500 block text-left"
-							class:text-red-600={showError}>{input.title}</label
-						>
-						<textarea
-							type="text"
-							name="name"
-							placeholder=" "
-							bind:value={data[input.key]}
-							class="mt-6 pt-3 p-2 block w-full px-0 bg-transparent border-2 rounded appearance-none focus:outline-none focus:ring-0 border-gray-200"
-							class:border-red-600={showError}
-						/>
-					</div>
-				{/if}
-			{/each}
+<h1 class="text-lg md:text-3xl font-bold mb-8 text-center text-white drop-shadow-[0_0_3px_#B8E3E9]">
+	Schedule a Free <br />Inspection
+</h1>
 
-			<button
-				id="button"
-				type="button"
-				class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-pink-500 hover:bg-pink-600"
-				on:click={toggleError}
-			>
-				Submit
-			</button>
-		</form>
-	</div>
-</div>
+<form id="form" novalidate>
+	{#each formInputs as input}
+		{#if input.type === 'input'}
+			<div class="relative z-0 w-full mb-6">
+				<input
+					type="text"
+					name="name"
+					placeholder=" "
+					bind:value={data[input.key]}
+					required={input.required}
+					class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent text-white border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 border-gray-200"
+					class:border-red-600={showError}
+				/>
+				<label
+					for="name"
+					class="absolute duration-300 top-3 -z-1 origin-0 !text-primary block text-left text-sm md:text-lg"
+					class:text-red-600={showError}>{input.title}</label
+				>
+				{#if !data[input.key]}
+					<span class="text-sm text-red-600" class:hidden={!showError}
+						>{input.title} is required</span
+					>
+				{/if}
+			</div>
+		{:else if input.type === 'radio'}
+			<fieldset class="relative z-0 w-full p-px mb-6 pt-6">
+				<legend
+					class="absolute text-primary transform scale-75 -top-3 origin-0 block text-left text-xl md:text-2xl mt-4 text-nowrap"
+					>{input.title}</legend
+				>
+				<div class="block pt-4 pb-2 space-x-6 text-left">
+					{#each input.options as option}
+						<label class="text-white">
+							<input
+								id={option}
+								type="radio"
+								name="{input.key}-{option}"
+								value={option}
+								bind:group={data[input.key]}
+								class="mr-2 text-black border-2 border-gray-300 focus:ring-powder-blue checked:bg-powder-blue checked:border-powder-blue"
+							/>
+							{option}
+						</label>
+					{/each}
+				</div>
+			</fieldset>
+		{:else if input.type === 'textarea'}
+			<div class="relative z-0 w-full mb-6">
+				<textarea
+					type="text"
+					name="name"
+					placeholder="Message"
+					bind:value={data[input.key]}
+					class="mt-6 p-2 block w-full bg-transparent border-2 rounded appearance-none focus:outline-none focus:ring-0 border-manatee min-h-[150px]"
+					class:border-red-600={showError}
+				/>
+			</div>
+		{/if}
+	{/each}
+
+	<button
+		id="button"
+		type="button"
+		class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none btn-primary btn-large !bg-powder !text-navy"
+		on:click={toggleError}
+	>
+		Submit
+	</button>
+</form>
 
 <style>
 	.-z-1 {

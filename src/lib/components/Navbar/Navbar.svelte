@@ -1,29 +1,15 @@
 <script>
+	import { services } from '$lib/tools';
 	export let darkMode = true;
 	const serviceList = [
 		{
 			title: 'Services',
-			submenu: [
-				{ title: 'Roof Replacement', link: '/services/roof-replacement', icon: 'fas fa-hammer' },
-				{ title: 'Roof Repair', link: '/services/roof-repairs', icon: 'fas fa-tools' },
-				{ title: 'Roof Inspections', link: '/services/roof-inspections', icon: 'fas fa-search' },
-				{ title: 'Gutter Services', link: '/services/gutter-services', icon: 'fas fa-home' },
-				{
-					title: 'Exterior Painting',
-					link: '/services/exterior-painting',
-					icon: 'fas fa-paint-roller'
-				},
-				{
-					title: 'Other Construction Services',
-					link: '/services/other-construction-services',
-					icon: 'fas fa-hard-hat'
-				}
-			]
+			submenu: services
 		},
-		{ title: 'About Us', link: '/about' },
-		{ title: 'Gallery', link: '/gallery' },
-		{ title: 'Financing', link: '/financing' },
-		{ title: 'Careers', link: '/careers' },
+		// { title: 'About Us', link: '/about' },
+		// { title: 'Gallery', link: '/gallery' },
+		// { title: 'Financing', link: '/financing' },
+		// { title: 'Careers', link: '/careers' },
 		{ title: 'Contact', link: '/contact' }
 	];
 
@@ -83,7 +69,7 @@
 							<h4
 								class="text-navy font-semibold text-sm md:text-base lg:text-2xl tracking-wider text-right dark:text-white"
 							>
-								<i class="fa fa-phone mr-1 lg:mr-3"></i> (913) 702-6965
+								<i class="fa fa-phone mr-1 lg:mr-3"></i> (913) 210.1028
 							</h4>
 						</div>
 						<a href="/contact" class=" lg:block hidden btn-large btn-primary font-semibold">
@@ -165,8 +151,7 @@
 																		{submenu.title}
 																	</h3>
 																	<p class="text-xs">
-																		Lorem Ipsum is simply dummy text of the printing and typesetting
-																		industry.
+																		{submenu.caption}
 																	</p>
 																</div>
 															</a>

@@ -17,50 +17,130 @@
 	}
 </script>
 
-<div class="p-4">
-	<input checked={darkMode} on:click={handleSwitchDarkMode} type="checkbox" id="theme-toggle" />
-	<label for="theme-toggle" class="inline-flex items-center justify-center">
-		{#if !darkMode}
-			<svg
-				class="w-5 h-5 m-auto transform translate-y-[30%]"
-				fill="#000000"
-				version="1.1"
-				id="Capa_1"
-				xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink"
-				viewBox="0 0 47.576 47.576"
-				xml:space="preserve"
-				><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-					id="SVGRepo_tracerCarrier"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				></g><g id="SVGRepo_iconCarrier">
-					<g>
-						<path
-							d="M24.235,12.13c-6.478,0-11.748,5.269-11.748,11.748s5.27,11.747,11.748,11.747s11.748-5.27,11.748-11.747 S30.713,12.13,24.235,12.13z M24.235,33.275c-5.182,0-9.398-4.216-9.398-9.397c0-5.183,4.216-9.397,9.398-9.397 c5.183,0,9.397,4.217,9.397,9.397C33.632,29.06,29.418,33.275,24.235,33.275z M23.06,6.485V1.589c0-0.649,0.526-1.174,1.175-1.174 c0.648,0,1.175,0.525,1.175,1.174v4.896c0,0.648-0.528,1.175-1.175,1.175C23.586,7.66,23.06,7.133,23.06,6.485z M35.095,13.287 c-0.459-0.458-0.459-1.202,0-1.661l4.209-4.209c0.459-0.458,1.203-0.458,1.662,0c0.459,0.459,0.459,1.203,0,1.661l-4.209,4.209 c-0.229,0.229-0.528,0.344-0.83,0.344C35.627,13.631,35.326,13.516,35.095,13.287z M5.63,9.078c-0.458-0.458-0.458-1.202,0-1.661 c0.459-0.458,1.203-0.458,1.661,0l4.21,4.209c0.458,0.459,0.458,1.204,0,1.661c-0.229,0.229-0.53,0.344-0.83,0.344 c-0.301,0-0.602-0.115-0.831-0.344L5.63,9.078z M24.472,41.091v4.896c0,0.649-0.525,1.175-1.173,1.175 c-0.649,0-1.175-0.527-1.175-1.175v-4.896c0-0.649,0.526-1.176,1.175-1.176C23.947,39.915,24.472,40.441,24.472,41.091z M12.437,34.288c0.459,0.458,0.459,1.202,0,1.661l-4.209,4.21c-0.229,0.23-0.53,0.346-0.831,0.346c-0.3,0-0.601-0.117-0.83-0.346 c-0.459-0.458-0.459-1.203,0-1.662l4.209-4.209C11.235,33.829,11.978,33.829,12.437,34.288z M41.902,38.497 c0.459,0.459,0.459,1.202,0,1.662c-0.229,0.23-0.527,0.346-0.83,0.346c-0.299,0-0.601-0.117-0.83-0.346l-4.209-4.21 c-0.459-0.459-0.459-1.202,0-1.661s1.201-0.459,1.66,0L41.902,38.497z M6.461,25.054H1.175C0.526,25.054,0,24.526,0,23.878 s0.526-1.176,1.175-1.176h5.286c0.649,0,1.175,0.527,1.175,1.176C7.635,24.526,7.11,25.052,6.461,25.054z M47.576,23.878 c0,0.649-0.526,1.176-1.174,1.176h-6.267c-0.649,0-1.176-0.527-1.176-1.176s0.526-1.176,1.176-1.176h6.267 C47.05,22.702,47.576,23.228,47.576,23.878z"
-						></path>
-					</g>
-				</g></svg
-			>
-		{/if}
+<div class="flex items-center justify-center mt-8 mr-8">
+	<input
+		checked={darkMode}
+		on:click={handleSwitchDarkMode}
+		type="checkbox"
+		id="darkmode-toggle"
+		class="hidden"
+	/>
+	<label
+		for="darkmode-toggle"
+		class="relative block w-[100px] h-[40px] bg-gray-300 dark:bg-gray-700 rounded-full cursor-pointer shadow-inner transition-all"
+	>
+		<span
+			class="absolute w-[30px] h-[30px] top-[5px] left-[12px] bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full shadow-md transition-transform transform"
+		></span>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 496 496"
+			class="absolute w-[20px] h-[20px] top-1/2 left-[10px] -translate-y-1/2 fill-white transition-colors"
+		>
+			<!-- Sun SVG path -->
+
+			<circle cx="248" cy="248" r="80" />
+			<!-- Rays -->
+			<line x1="248" y1="48" x2="248" y2="0" stroke="#fff" stroke-width="16" />
+			<line x1="248" y1="448" x2="248" y2="496" stroke="#fff" stroke-width="16" />
+			<line x1="48" y1="248" x2="0" y2="248" stroke="#fff" stroke-width="16" />
+			<line x1="448" y1="248" x2="496" y2="248" stroke="#fff" stroke-width="16" />
+			<line x1="104" y1="104" x2="48" y2="48" stroke="#fff" stroke-width="16" />
+			<line x1="392" y1="104" x2="448" y2="48" stroke="#fff" stroke-width="16" />
+			<line x1="104" y1="392" x2="48" y2="448" stroke="#fff" stroke-width="16" />
+			<line x1="392" y1="392" x2="448" y2="448" stroke="#fff" stroke-width="16" />
+		</svg>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 49.739 49.739"
+			class="absolute w-[20px] h-[20px] top-1/2 right-[10px] -translate-y-1/2 fill-gray-700 dark:fill-white transition-colors"
+		>
+			<!-- Moon SVG path -->
+			<path
+				d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
+           c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0
+           c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822
+           C32.639,48.039,28.825,48.888,25.068,48.889z"
+			/>
+		</svg>
 	</label>
 </div>
 
-<style lang="postcss">
-	#theme-toggle {
-		@apply invisible;
+<style>
+	label {
+		width: 100px;
+		height: 40px;
+		position: relative;
+		display: block;
+		background: #ebebeb;
+		border-radius: 40px;
+		box-shadow:
+			inset 0px 5px 15px rgba(22, 27, 34, 0.4),
+			inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+		cursor: pointer;
+		transition: 0.3s;
 	}
 
-	#theme-toggle + label {
-		@apply inline-block cursor-pointer h-8 w-8 absolute top-6 right-4 lg:right-12 rounded-full duration-300 content-[''];
+	label:after {
+		content: '';
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: 2.5px;
+		left: 10px;
+		background: linear-gradient(180deg, #ffcc89, #d8860b);
+		border-radius: 180px;
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+		transition: 0.3s;
 	}
 
-	#theme-toggle:not(:checked) + label {
-		@apply bg-powder;
+	label svg {
+		position: absolute;
+		width: 34px;
+		top: 20px;
+		z-index: 100;
+		transition: 0.3s;
 	}
 
-	#theme-toggle:checked + label {
-		@apply bg-transparent;
-		box-shadow: inset -7px -9px 1px 1px #ddd;
+	label svg.sun {
+		left: 40px;
+		fill: #fff;
+	}
+
+	label svg.moon {
+		left: 40px;
+		fill: #7e7e7e;
+	}
+
+	input {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+	}
+
+	input:checked + label {
+		background: #0d1117;
+	}
+
+	input:checked + label:after {
+		left: 54px;
+		/* transform: translateX(-100%); */
+		background: linear-gradient(180deg, #777, #3a3a3a);
+	}
+
+	input:checked + label svg.sun {
+		fill: #7e7e7e;
+	}
+
+	input:checked + label svg.moon {
+		fill: #fff;
+	}
+
+	input:active + label:after {
+		width: 60px;
+	}
+
+	input:checked + label + .background {
+		background: #0d1117;
 	}
 </style>
