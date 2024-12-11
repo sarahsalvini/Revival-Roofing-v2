@@ -30,7 +30,7 @@
 
 <svelte:window bind:innerWidth={w} />
 
-<div class="bg-white dark:bg-dark-4">
+<div class="bg-white dark:bg-dark-4 shadow-md dark:shadow-md">
 	<div class="container">
 		<div class="relative flex items-center justify-between">
 			<div class="xl:w-full w-80 max-w-full">

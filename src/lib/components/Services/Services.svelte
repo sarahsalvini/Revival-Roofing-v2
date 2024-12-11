@@ -12,7 +12,7 @@
 					>
 						Our Services
 					</h2>
-					<p class="text-base text-body-color dark:text-white">
+					<p class="text-sm md:text-base text-body-color dark:text-white">
 						At Revival Roofing we offer a wide range of services to protect and enhance your home.
 						From roof repairs and inspections after Midwest storms to custom interior and exterior
 						projects, we’re here to meet your unique needs. We also work with your insurance company
@@ -29,14 +29,16 @@
 						class="mb-9 rounded-[20px] bg-bone p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10 dark:bg-dark-4 lg:min-h-[420px] h-full"
 					>
 						<div
-							class="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-dark-4 text-white dark:bg-powder dark:text-navy"
+							class=" mb-4 md:mb-6 lg:mb-8 flex h-[40px] w-[40px] md:h-[50px] md:w-[50px] lg:h-[70px] lg:w-[70px] items-center justify-center rounded lg:rounded-2xl bg-dark-4 text-white dark:bg-powder dark:text-navy"
 						>
-							<i class="{service.icon} text-4xl" />
+							<i class="{service.icon} md:text-2xl lg:text-4xl" />
 						</div>
-						<h4 class="mb-[14px] text-2xl font-semibold text-dark dark:text-white uppercase">
+						<h4
+							class="mb-[14px] md:text-lg lg:text-2xl font-semibold text-dark dark:text-white uppercase"
+						>
 							{service.title}
 						</h4>
-						<p class="text-body-color dark:text-white">
+						<p class="text-body-color dark:text-white text-sm md:text-base">
 							{service.description}
 						</p>
 					</div>

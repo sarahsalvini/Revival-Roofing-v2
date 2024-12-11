@@ -59,7 +59,7 @@
 				/>
 				<label
 					for="name"
-					class="absolute duration-300 top-3 -z-1 origin-0 !text-primary block text-left text-sm md:text-lg"
+					class="absolute duration-300 top-3 -z-1 origin-0 !text-primary block text-left text-xs md:text-md"
 					class:text-red-600={showError}>{input.title}</label
 				>
 				{#if !data[input.key]}
@@ -71,12 +71,12 @@
 		{:else if input.type === 'radio'}
 			<fieldset class="relative z-0 w-full p-px mb-6 pt-6">
 				<legend
-					class="absolute text-primary transform scale-75 -top-3 origin-0 block text-left text-xl md:text-2xl mt-4 text-nowrap"
+					class="absolute text-primary transform scale-75 -top-3 origin-0 block text-left text-md md:text-lg mt-4 md:text-nowrap"
 					>{input.title}</legend
 				>
 				<div class="block pt-4 pb-2 space-x-6 text-left">
 					{#each input.options as option}
-						<label class="text-white">
+						<label class="text-white text-sm md:text-md">
 							<input
 								id={option}
 								type="radio"

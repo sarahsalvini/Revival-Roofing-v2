@@ -1,6 +1,9 @@
 <script>
+	import { createEventDispatcher } from 'svelte';
 	import HeroForm from '../HeroForm/HeroForm.svelte';
 	import BevelCard from '../BevelCard/BevelCard.svelte';
+
+	const dispatch = createEventDispatcher();
 </script>
 
 <!-- ====== Hero Section Start -->
@@ -36,8 +39,13 @@
 						class="flex flex-wrap items-center gap-2 md:gap-4 justify-center lg:justify-start w-full m-auto lg:m-none"
 					>
 						<li>
-							<a href="javascript:void(0)" class=" btn-primary btn-large !bg-powder !text-navy">
-								Get a Free Estimate</a
+							<button
+								on:click={() => {
+									dispatch('contact');
+								}}
+								class=" btn-primary btn-large !bg-powder !text-navy"
+							>
+								Get a Free Estimate</button
 							>
 						</li>
 						<li>
