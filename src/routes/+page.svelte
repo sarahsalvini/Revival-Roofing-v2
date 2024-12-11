@@ -2,6 +2,7 @@
 	import ContactSection from '$lib/components/ContactSection/ContactSection.svelte';
 	import HeroSection from '$lib/components/HeroSection/HeroSection.svelte';
 	import Services from '$lib/components/Services/Services.svelte';
+	import Stats from '$lib/components/Stats/Stats.svelte';
 
 	export function scrollToSection(e: string) {
 		const offsetPosition = document.querySelector(e)?.offsetTop - 100;
@@ -14,7 +15,8 @@
 </script>
 
 <HeroSection on:contact={() => scrollToSection('#contact')} />
-<div class="h-20 lg:h-[120px] w-full" />
+
+<Stats />
 <!-- Services -->
 <section
 	id="services"
@@ -34,8 +36,6 @@
 	<div class="text-navy dark:text-white pt-28">Bio Section</div>
 </section> -->
 
-<section class="dark:bg-dark bg-white h-[400px]" id="contact">
-	<div class="pt-28">
-		<ContactSection />
-	</div>
+<section class="dark:bg-dark bg-white z-10" id="contact">
+	<ContactSection />
 </section>

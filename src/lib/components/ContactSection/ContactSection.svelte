@@ -96,7 +96,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
+				<div class="card h-fit max-w-6xl p-5 md:pt-0 md:p-12" id="form">
 					<h2 class="mb-4 text-2xl font-bold dark:text-white">Ready to Get Started?</h2>
 					<form id="contactForm">
 						<div class="mb-6">
