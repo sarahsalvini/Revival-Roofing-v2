@@ -1,5 +1,5 @@
 <script>
-	import { formInputs } from '$lib/tools';
+	import { formInputs, handleEmailSubmit } from '$lib/tools';
 
 	let data = {
 		name: '',
@@ -142,14 +142,20 @@
 												cols="30"
 												rows="5"
 												placeholder="Write your message..."
-												class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+												class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 bg-transparent"
 											></textarea>
 										{/if}
 									</div>
 								{/each}
 
 								<div class="text-center">
-									<button type="submit" class="btn-primary btn-large">Send Message</button>
+									<button
+										type="submit"
+										class="btn-primary btn-large"
+										on:submit={(e) => {
+											handleEmailSubmit(e, data);
+										}}>Send Message</button
+									>
 								</div>
 							</div>
 						</div>

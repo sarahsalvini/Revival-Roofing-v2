@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { formInputs } from '$lib/tools';
+	import { formInputs, handleEmailSubmit } from '$lib/tools';
 	let showError = false;
 
 	function toggleError() {
@@ -15,36 +15,42 @@
 		message: ''
 	};
 
-	async function handleSubmit(event) {
-		event.preventDefault();
+	// async function handleSubmit(event) {
+	// 	event.preventDefault();
 
-		try {
-			const response = await fetch('/api/send-email', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(data)
-			});
+	// 	try {
+	// 		const response = await fetch('/api/send-email', {
+	// 			method: 'POST',
+	// 			headers: {
+	// 				'Content-Type': 'application/json'
+	// 			},
+	// 			body: JSON.stringify(data)
+	// 		});
 
-			if (response.ok) {
-				alert('Email sent successfully!');
-			} else {
-				const error = await response.json();
-				alert('Failed to send email: ' + error.error);
-			}
-		} catch (error) {
-			console.error('Error:', error);
-			alert('An error occurred. Please try again.');
-		}
-	}
+	// 		if (response.ok) {
+	// 			alert('Email sent successfully!');
+	// 		} else {
+	// 			const error = await response.json();
+	// 			alert('Failed to send email: ' + error.error);
+	// 		}
+	// 	} catch (error) {
+	// 		console.error('Error:', error);
+	// 		alert('An error occurred. Please try again.');
+	// 	}
+	// }
 </script>
 
 <h1 class="text-lg md:text-3xl font-bold mb-8 text-center text-white drop-shadow-[0_0_3px_#B8E3E9]">
 	Schedule a Free <br />Inspection
 </h1>
 
-<form id="form" novalidate on:submit={handleSubmit}>
+<form
+	id="form"
+	novalidate
+	on:submit={(e) => {
+		handleEmailSubmit(e, data);
+	}}
+>
 	{#each formInputs as input}
 		{#if input.type === 'input'}
 			<div class="relative z-0 w-full mb-6">

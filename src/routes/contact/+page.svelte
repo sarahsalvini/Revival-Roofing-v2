@@ -1,3 +1,7 @@
-<script></script>
+<script>
+	import ContactSection from '$lib/components/ContactSection/ContactSection.svelte';
+</script>
 
-contact
+<section class="dark:bg-dark bg-white z-10" id="contact">
+	<ContactSection />
+</section>
