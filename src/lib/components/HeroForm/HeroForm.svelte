@@ -60,7 +60,7 @@
 					placeholder=" "
 					bind:value={data[input.key]}
 					required={input.required}
-					class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent text-white border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 border-gray-200"
+					class="pt-3 pb-2 block w-full px-0 mt-0 !bg-transparent text-white border-0 border-b-2 appearance-none"
 					class:border-red-600={showError}
 				/>
 				<label

@@ -7,7 +7,7 @@
 			submenu: services
 		},
 		// { title: 'About Us', link: '/about' },
-		// { title: 'Gallery', link: '/gallery' },
+		{ title: 'Gallery', link: '/gallery' },
 		// { title: 'Financing', link: '/financing' },
 		// { title: 'Careers', link: '/careers' },
 		{ title: 'Contact', link: '/contact' }
@@ -66,11 +66,12 @@
 						class="items-center justify-end gap-8 pr-12 lg:pr-0 sm:flex lg:pr-0 whitespace-nowrap"
 					>
 						<div class="px-6 lg:px-0 hidden sm:block">
-							<h4
+							<a
+								href="tel:9132101028"
 								class="text-navy font-semibold text-sm md:text-base lg:text-2xl tracking-wider text-right dark:text-white"
 							>
 								<i class="fa fa-phone mr-1 lg:mr-3"></i> (913) 210.1028
-							</h4>
+							</a>
 						</div>
 						<a href="/contact" class=" lg:block hidden btn-large btn-primary font-semibold">
 							Schedule a Free Inspection</a

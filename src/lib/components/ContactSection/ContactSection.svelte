@@ -152,7 +152,8 @@
 									<button
 										type="submit"
 										class="btn-primary btn-large"
-										on:submit={(e) => {
+										on:click={(e) => {
+											console.log('submit');
 											handleEmailSubmit(e, data);
 										}}>Send Message</button
 									>

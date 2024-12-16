@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import HeroForm from '../HeroForm/HeroForm.svelte';
 	import BevelCard from '../BevelCard/BevelCard.svelte';
+	import DecrotiveSquareDots from '../DecrotiveSquareDots/DecrotiveSquareDots.svelte';
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -64,8 +65,9 @@
 				<div class="lg:ml-auto lg:text-right">
 					<div class="relative z-10 inline-block pt-11 lg:pt-0">
 						<BevelCard><div slot="content"><HeroForm /></div></BevelCard>
-						<span class="absolute -bottom-8 -left-8 z-[-1]">
-							<svg
+						<span class="absolute -bottom-8 -left-8 z-[-1] hidden md:block">
+							<DecrotiveSquareDots />
+							<!-- <svg
 								width="93"
 								height="93"
 								viewBox="0 0 93 93"
@@ -97,7 +99,7 @@
 								<circle cx="90.5" cy="46.5" r="2.5" fill="#B8E3E9" />
 								<circle cx="90.5" cy="68.5" r="2.5" fill="#B8E3E9" />
 								<circle cx="90.5" cy="90.5" r="2.5" fill="#B8E3E9" />
-							</svg>
+							</svg> -->
 						</span>
 					</div>
 				</div>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ContactSection from '$lib/components/ContactSection/ContactSection.svelte';
+	import Gallery from '$lib/components/Gallery/Gallery.svelte';
 	import HeroSection from '$lib/components/HeroSection/HeroSection.svelte';
 	import Services from '$lib/components/Services/Services.svelte';
 	import Stats from '$lib/components/Stats/Stats.svelte';
@@ -14,9 +15,16 @@
 	}
 </script>
 
-<HeroSection on:contact={() => scrollToSection('#contact')} />
+<!-- Hero -->
+<section id="hero">
+	<HeroSection on:contact={() => scrollToSection('#contact')} />
+</section>
 
-<Stats />
+<!-- Stats -->
+<section id="stats" class="relative z-10 overflow-hidden bg-white dark:bg-dark-4 py-24 text-dark">
+	<Stats />
+</section>
+
 <!-- Services -->
 <section
 	id="services"
@@ -34,6 +42,15 @@
 
 <section id="bio" class="relative dark:bg-dark-4 bg-mercury h-[400px] custom-border-arrow">
 	<div class="text-navy dark:text-white pt-28">Bio Section</div>
+</section> -->
+
+<!-- TODO: make this a gallery with tabs of different projects in the future ex: residential, commercial, etc -->
+<!-- <section id="gallery">
+	<p class="mt-12 text-base font-semibold uppercase tracking-wide text-powder mb-4">Projects</p>
+	<Gallery />
+	<div class="block mt-8">
+		<a href="/gallery" class="btn-primary btn-large !bg-powder !text-navy">View More</a>
+	</div>
 </section> -->
 
 <section class="dark:bg-dark bg-white z-10" id="contact">
