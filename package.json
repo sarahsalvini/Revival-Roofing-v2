@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"lodash": "^4.17.21",
 		"nodemailer": "^6.9.16",
 		"tailgrids": "^2.2.7"
 	}

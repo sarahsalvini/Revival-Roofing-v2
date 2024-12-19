@@ -60,6 +60,15 @@ export let services = [
 	}
 ];
 
+export let galleryTabs = [
+	{ title: 'All', key: 'all', active: true },
+	{ title: 'Roofing', key: 'installation', active: false },
+	{ title: 'Gutters', key: 'gutter', active: false },
+	{ title: 'Exterior', key: 'exterior', active: false }
+	// { title: 'Interior', key: 'interior', active: false }
+	// {title: 'Community Outreach', key: 'community', active: false}
+];
+
 export async function handleEmailSubmit(event, data) {
 	event.preventDefault();
 
@@ -83,3 +92,51 @@ export async function handleEmailSubmit(event, data) {
 		alert('An error occurred. Please try again.');
 	}
 }
+
+export const galleryImages = [
+	{
+		src: '/gallery/1.png',
+		alt: 'gutter',
+		tab: 'gutter'
+	},
+	{
+		src: '/gallery/2.png',
+		alt: 'roof completed',
+		tab: 'installation'
+	},
+	{
+		src: '/gallery/3.png',
+		alt: 'roof completed',
+		tab: 'installation'
+	},
+	{
+		src: '/gallery/4.png',
+		alt: 'roof completed',
+		tab: 'installation'
+	},
+	{
+		src: '/gallery/5.png',
+		alt: 'roof after installation',
+		tab: 'installation'
+	},
+	{
+		src: '/gallery/6.png',
+		alt: 'roof after installation',
+		tab: 'installation'
+	},
+	{
+		src: '/gallery/7.png',
+		alt: 'exterior paint',
+		tab: 'exterior'
+	},
+	{
+		src: '/gallery/8.png',
+		alt: 'roof installation',
+		tab: 'exterior'
+	},
+	{
+		src: '/gallery/9.png',
+		alt: 'roof installation',
+		tab: 'installation'
+	}
+];

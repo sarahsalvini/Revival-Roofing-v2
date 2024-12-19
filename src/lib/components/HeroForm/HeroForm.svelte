@@ -14,30 +14,6 @@
 		contactMethod: 'Text',
 		message: ''
 	};
-
-	// async function handleSubmit(event) {
-	// 	event.preventDefault();
-
-	// 	try {
-	// 		const response = await fetch('/api/send-email', {
-	// 			method: 'POST',
-	// 			headers: {
-	// 				'Content-Type': 'application/json'
-	// 			},
-	// 			body: JSON.stringify(data)
-	// 		});
-
-	// 		if (response.ok) {
-	// 			alert('Email sent successfully!');
-	// 		} else {
-	// 			const error = await response.json();
-	// 			alert('Failed to send email: ' + error.error);
-	// 		}
-	// 	} catch (error) {
-	// 		console.error('Error:', error);
-	// 		alert('An error occurred. Please try again.');
-	// 	}
-	// }
 </script>
 
 <h1 class="text-lg md:text-3xl font-bold mb-8 text-center text-white drop-shadow-[0_0_3px_#B8E3E9]">
