@@ -17,7 +17,7 @@
 	}
 </script>
 
-<div class="flex items-center justify-center mt-8 mr-8">
+<div class="flex items-center justify-center mt-4 mr-8">
 	<input
 		checked={darkMode}
 		on:click={handleSwitchDarkMode}
@@ -27,15 +27,15 @@
 	/>
 	<label
 		for="darkmode-toggle"
-		class="relative block w-[100px] h-[40px] bg-gray-300 dark:bg-gray-700 rounded-full cursor-pointer shadow-inner transition-all"
+		class="relative block w-[70px] h-[30px] bg-gray-300 dark:bg-gray-700 rounded-full cursor-pointer shadow-inner transition-all"
 	>
 		<span
-			class="absolute w-[30px] h-[30px] top-[5px] left-[12px] bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full shadow-md transition-transform transform"
+			class="absolute w-[20px] h-[20px] top-[5px] left-[12px] bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full shadow-md transition-transform transform"
 		></span>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 496 496"
-			class="absolute w-[20px] h-[20px] top-1/2 left-[10px] -translate-y-1/2 fill-white transition-colors"
+			class="absolute w-[10px] h-[20px] top-1/2 left-[10px] -translate-y-1/2 fill-white transition-colors"
 		>
 			<!-- Sun SVG path -->
 
@@ -53,7 +53,7 @@
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 49.739 49.739"
-			class="absolute w-[20px] h-[20px] top-1/2 right-[10px] -translate-y-1/2 fill-gray-700 dark:fill-white transition-colors"
+			class="absolute w-[20px] h-[20px] top-1/4 right-[10px] -translate-y-1/2 fill-gray-700 dark:fill-white transition-colors"
 		>
 			<!-- Moon SVG path -->
 			<path
