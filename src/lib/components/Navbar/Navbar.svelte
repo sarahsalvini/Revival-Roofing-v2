@@ -70,7 +70,7 @@
 								href="tel:9132101028"
 								class="text-navy font-semibold text-sm md:text-base lg:text-2xl tracking-wider text-right dark:text-white"
 							>
-								<i class="fa fa-phone mr-1 lg:mr-3"></i> (913) 210.1028
+								<i class="fa fa-phone mr-1 lg:mr-3"></i> (913) 210-1028
 							</a>
 						</div>
 						<a href="/contact" class=" lg:block hidden btn-large btn-primary font-semibold">
