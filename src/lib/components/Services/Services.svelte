@@ -19,6 +19,9 @@
 						to simplify the claims process, ensuring your home is safe, secure, and beautifully
 						customized.
 					</p>
+					<div class="mt-6">
+						<a href="/gallery" class="btn-primary btn-large">View Projects</a>
+					</div>
 				</div>
 			</div>
 		</div>

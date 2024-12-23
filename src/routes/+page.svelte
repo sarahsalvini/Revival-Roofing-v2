@@ -4,6 +4,8 @@
 	import HeroSection from '$lib/components/HeroSection/HeroSection.svelte';
 	import Services from '$lib/components/Services/Services.svelte';
 	import Stats from '$lib/components/Stats/Stats.svelte';
+	import Team from '$lib/components/Team/Team.svelte';
+	import Testimonials from '$lib/components/Testimonials/Testimonials.svelte';
 
 	export function scrollToSection(e: string) {
 		const offsetPosition = document.querySelector(e)?.offsetTop - 100;
@@ -33,16 +35,13 @@
 	<Services />
 </section>
 
-<!-- <section
-	id="testimonials"
-	class="relative z-10 dark:bg-powder bg-navy custom-clip-two h-[400px] mb-[-5vw]"
->
-	<div class="text-white dark:text-navy pt-28">Testimonials</div>
+<section id="bio" class="relative z-10 dark:bg-powder bg-navy custom-clip-two min-h-fit mb-[-5vw]">
+	<div class="text-white dark:text-navy py-28"><Team /></div>
 </section>
 
-<section id="bio" class="relative dark:bg-dark-4 bg-mercury h-[400px] custom-border-arrow">
-	<div class="text-navy dark:text-white pt-28">Bio Section</div>
-</section> -->
+<section id="testimonials" class="relative bg-mercury custom-border-arrow">
+	<div class="text-navy dark:text-white pt-28"><Testimonials /></div>
+</section>
 
 <!-- TODO: make this a gallery with tabs of different projects in the future ex: residential, commercial, etc -->
 <!-- <section id="gallery">

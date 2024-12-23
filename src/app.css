@@ -392,6 +392,10 @@ select:-webkit-autofill:focus {
 	@apply uppercase tracking-wider rounded-lg bg-dark-4 dark:bg-primary text-powder dark:text-navy hover:bg-dark hover:shadow-dark-6/60  hover:shadow-md;
 }
 
+.btn-primary-reverse {
+	@apply uppercase tracking-wider rounded-lg dark:bg-dark-4 bg-primary dark:text-powder text-navy hover:bg-dark hover:shadow-dark-6/60  hover:shadow-md;
+}
+
 .btn-secondary {
 	@apply uppercase tracking-wider rounded-lg border border-primary bg-transparent text-navy hover:bg-primary/90;
 }

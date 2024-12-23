@@ -122,11 +122,11 @@ export default {
 				},
 				'.bg-mercury.custom-border-arrow::after': {
 					borderTopColor: '#E1E1E1' // Light mode arrow border
-				},
-				// Border for dark mode
-				'.dark .bg-dark-4 .custom-border-arrow::after': {
-					borderTopColor: '#222731' // Dark mode arrow border (example color)
 				}
+				// Border for dark mode
+				// '.dark .bg-dark-4 .custom-border-arrow::after': {
+				// 	borderTopColor: '#222731' // Dark mode arrow border (example color)
+				// }
 			});
 		}
 	]
