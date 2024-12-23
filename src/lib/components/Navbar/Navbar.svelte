@@ -99,7 +99,7 @@
 					<nav
 						class:hidden={!navbarOpen}
 						id="navbarCollapse"
-						class="absolute right-0 sm:right-4 top-full w-full max-h-[80vh] flex-shrink-0 lg:max-h-[100vh] lg:overflow-visible overflow-y-auto max-w-[300px] rounded-lg px-6 py-5 shadow lg:px-0 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none bg-dark-2 lg:bg-transparent"
+						class="absolute right-0 sm:right-4 top-full w-full mt-3 max-h-[80vh] flex-shrink-0 lg:max-h-[100vh] lg:overflow-visible overflow-y-auto max-w-[300px] rounded-lg px-6 py-5 shadow lg:px-0 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none bg-dark-2 lg:bg-transparent"
 					>
 						<ul class="block lg:flex justify-end gap-6 relative">
 							{#each serviceList as service}
@@ -130,7 +130,7 @@
 												class:hidden={!showMegaMenu}
 												class:desktop={!isMobile && darkMode}
 												class:whiteDesktop={!isMobile && !darkMode}
-												class="w-full rounded-xl lg:dark:bg-dark-4 lg:bg-bone bg-dark-4 p-2 xl:w-[750px] lg:w-[650px] lg:p-8 lg:border-t-[12px] lg:dark:border-powder lg:border-navy dark:shadow-powder/10 shadow-md"
+												class="w-full rounded-xl lg:dark:bg-dark-4 lg:bg-bone bg-dark-4 p-2 xl:w-[650px] lg:w-[550px] lg:p-8 lg:border-t-[12px] lg:dark:border-powder lg:border-navy dark:shadow-powder/10 shadow-md"
 											>
 												<!-- Inner submenu list wrapper -->
 												<div

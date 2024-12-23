@@ -14,7 +14,7 @@
 		{
 			name: 'Marsha M.',
 			project: 'Roof Replacement',
-			text: "I was having a hard time finding a company that could handle my roof replacement and gutter repair. I was also having issues with the previous company I had done work for. Jake was extremely professional, and I'm so glad I went with Revival Roofing - they exceeded all of my expectations.",
+			text: "I was having a hard time finding a company that could handle my roof replacement and gutter repair. Jake was extremely professional, and I'm so glad I went with Revival Roofing - they exceeded all of my expectations.",
 			rating: 5,
 			url: yelpURL
 		},
@@ -52,10 +52,10 @@
 			<div class="flex items-center gap-8 w-full justify-center lg:justify-end mt-8">
 				<button
 					on:click={prevSlide}
-					class="group text-navy flex justify-center items-center border border-solid border-indigo-600 w-12 h-12 transition-all duration-500 rounded-full hover:bg-indigo-600"
+					class="group text-navy flex justify-center items-center border border-solid border-dark w-12 h-12 transition-all duration-500 rounded-full hover:bg-dark-5"
 				>
 					<svg
-						class="h-6 w-6 text-indigo-600 group-hover:text-navy"
+						class="h-6 w-6 text-dark group-hover:text-bone"
 						viewBox="0 0 24 24"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -71,10 +71,10 @@
 				</button>
 				<button
 					on:click={nextSlide}
-					class="group text-navy flex justify-center items-center border border-solid border-indigo-600 w-12 h-12 transition-all duration-500 rounded-full hover:bg-indigo-600"
+					class="group text-navy flex justify-center items-center border border-solid border-dark w-12 h-12 transition-all duration-500 rounded-full hover:bg-dark-5"
 				>
 					<svg
-						class="h-6 w-6 text-indigo-600 group-hover:text-navy"
+						class="h-6 w-6 text-dark group-hover:text-bone"
 						viewBox="0 0 24 24"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
