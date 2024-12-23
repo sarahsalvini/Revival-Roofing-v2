@@ -23,7 +23,7 @@
 		}}
 	/>
 
-	<div class=" mt-8">
+	<div class="my-8">
 		<div class="break-inside-avoid gap-8 md:columns-2 lg:columns-3">
 			{#if activeImages.length}
 				{#each activeImages as image}
