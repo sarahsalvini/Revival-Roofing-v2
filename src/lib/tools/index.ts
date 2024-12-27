@@ -95,6 +95,16 @@ export async function handleEmailSubmit(event, data) {
 
 export const galleryImages = [
 	{
+		src: '/roofing_photos/IMG_2201.PNG',
+		alt: 'roof installation',
+		tab: 'installation'
+	},
+	{
+		src: '/roofing_photos/IMG_2195.PNG',
+		alt: 'exterior painting',
+		tab: 'exterior'
+	},
+	{
 		src: '/gallery/1.png',
 		alt: 'gutter',
 		tab: 'gutter'
@@ -138,5 +148,65 @@ export const galleryImages = [
 		src: '/gallery/9.png',
 		alt: 'roof installation',
 		tab: 'installation'
+	},
+	{
+		src: '/roofing_photos/1.png',
+		alt: 'roof transformation',
+		tab: 'installation'
+	},
+	{
+		src: '/roofing_photos/2.png',
+		alt: 'roof transformation',
+		tab: 'installation'
+	},
+	{
+		src: '/roofing_photos/3.png',
+		alt: 'window installation',
+		tab: 'exterior'
+	},
+	{
+		src: '/roofing_photos/IMG_2005.jpg',
+		alt: 'Window installation',
+		tab: 'exterior'
+	},
+	{
+		src: '/roofing_photos/IMG_2006.jpg',
+		alt: 'Window installation',
+		tab: 'exterior'
+	},
+	{
+		src: '/roofing_photos/IMG_2023.jpg',
+		alt: 'Window installation',
+		tab: 'exterior'
+	},
+	{
+		src: '/roofing_photos/IMG_2103.jpg',
+		alt: 'roof installation',
+		tab: 'installation'
+	},
+	{
+		src: '/roofing_photos/IMG_2161.PNG',
+		alt: 'exterior sunroom add on',
+		tab: 'exterior'
+	},
+	{
+		src: '/roofing_photos/IMG_2164.PNG',
+		alt: 'exterior sunroom add on',
+		tab: 'exterior'
+	},
+	{
+		src: '/roofing_photos/IMG_2166.PNG',
+		alt: 'exterior sunroom add on',
+		tab: 'exterior'
+	},
+	{
+		src: '/roofing_photos/IMG_2185.PNG',
+		alt: 'roof transformation',
+		tab: 'installation'
+	},
+	{
+		src: '/roofing_photos/IMG_2186.PNG',
+		alt: 'exterior deck stain refresh',
+		tab: 'exterior'
 	}
 ];

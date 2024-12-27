@@ -11,6 +11,7 @@
 		} else {
 			activeImages = _.cloneDeep(galleryImages.filter((image: any) => image.tab === tab));
 		}
+		activeImages = activeImages;
 		return;
 	}
 </script>

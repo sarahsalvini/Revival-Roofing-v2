@@ -65,7 +65,7 @@
 									Contact
 								</h3>
 								<p class="text-dark dark:text-mercury">Mobile: +1 (913) 210-1028</p>
-								<p class="text-dark dark:text-mercury">Mail: info@revivalroofingkc.com</p>
+								<p class="text-dark dark:text-mercury">E-Mail: info@revivalroofingkc.com</p>
 							</div>
 						</li>
 						<li class="flex">
