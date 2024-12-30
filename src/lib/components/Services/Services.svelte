@@ -27,7 +27,7 @@
 		</div>
 		<div class="-mx-3 flex flex-wrap text-left gap-y-5">
 			{#each services as service}
-				<div class="w-full px-4 md:w-1/2 lg:w-1/3">
+				<a class="w-full px-4 md:w-1/2 lg:w-1/3" href={service.link}>
 					<div
 						class=" rounded-[20px] bg-bone p-5 shadow-2 hover:shadow-lg md:px-6 xl:px-8 dark:bg-dark-4 lg:min-h-[80px] h-full"
 					>
@@ -45,7 +45,7 @@
 							{service.description}
 						</p>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</div>

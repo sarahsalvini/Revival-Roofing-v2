@@ -140,6 +140,7 @@
 														<div class="space-y-2 text-left">
 															<a
 																href={submenu.link}
+																on:click={toggleMegaMenu}
 																class="group flex flex-col gap-4 rounded-lg p-4 duration-200 lg:flex-row text-white lg:dark:text-white lg:text-navy hover:text-powder dark:hover:text-powder lg:hover:text-[#3A94A8]"
 															>
 																<div class="">

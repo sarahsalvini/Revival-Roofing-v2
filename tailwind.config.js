@@ -115,7 +115,7 @@ export default {
 					position: 'absolute',
 					content: '""',
 					zIndex: '1',
-					bottom: '-25px',
+					bottom: '-24px',
 					borderStyle: 'solid',
 					borderWidth: '25px 50px 0px 50px',
 					borderColor: 'transparent transparent transparent transparent' // Default to transparent

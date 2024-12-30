@@ -44,13 +44,22 @@
 </section>
 
 <!-- TODO: make this a gallery with tabs of different projects in the future ex: residential, commercial, etc -->
-<!-- <section id="gallery">
-	<p class="mt-12 text-base font-semibold uppercase tracking-wide text-powder mb-4">Projects</p>
-	<Gallery />
-	<div class="block mt-8">
-		<a href="/gallery" class="btn-primary btn-large !bg-powder !text-navy">View More</a>
+<section
+	id="gallery"
+	class="min-h-fit relative z-20 dark:bg-dark bg-powder custom-clip-one mb-[-5vw] shadow-[0px_-37px_20px_0px_rgba(13,_17,_23,_1)]"
+>
+	<div class="py-20">
+		<h2
+			class=" text-3xl font-bold leading-[1.2] text-dark sm:text-4xl md:text-[40px] dark:text-powder"
+		>
+			Projects
+		</h2>
+		<Gallery />
+		<div class="block mt-8">
+			<a href="/gallery" class="btn-primary btn-large !bg-powder !text-navy">View More</a>
+		</div>
 	</div>
-</section> -->
+</section>
 
 <section class="dark:bg-dark bg-white z-10" id="contact">
 	<ContactSection />

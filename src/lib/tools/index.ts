@@ -18,7 +18,7 @@ export const formInputs = [
 export let services = [
 	{
 		title: 'Roof Replacement',
-		link: '/services/roof-replacement',
+		link: '/services/roof-replacements',
 		icon: 'fas fa-hammer',
 		description: `We provide professional roof replacement services tailored to your home or business needs. Whether it's due to aging, storm damage, or structural issues, our team ensures a seamless process, from assessment to installation, using high-quality materials for long-lasting results.`,
 		caption: `Professional roof replacement services using high-quality materials to ensure durability and protection for your home or business.`
@@ -45,15 +45,15 @@ export let services = [
 		caption: `Reliable gutter installation, cleaning, and repair services to protect your property from water damage and ensure proper drainage.`
 	},
 	{
-		title: 'Exterior Painting',
+		title: 'Painting Services',
 		link: '/services/exterior-painting',
 		icon: 'fas fa-paint-roller',
-		description: `Transform your property’s curb appeal with our professional exterior painting services. We use premium paints and expert techniques to refresh and protect your home or business, ensuring a flawless and durable finish.`,
-		caption: `High-quality exterior painting services to refresh your property’s appearance and protect it from the elements.`
+		description: `Transform your property’s curb appeal with our professional painting services. We use premium paints and expert techniques to refresh and protect your home or business, ensuring a flawless and durable finish.`,
+		caption: `High-quality painting services to refresh your property’s appearance and protect it from the elements.`
 	},
 	{
 		title: 'Custom Projects',
-		link: '/services/other-construction-services',
+		link: '/services/custom-projects',
 		icon: 'fas fa-hard-hat',
 		description: `From unique designs to special construction needs, our custom project services bring your vision to life. We work closely with you to create personalized solutions that meet your exact specifications and deliver exceptional results.`,
 		caption: `Personalized custom project solutions to meet your unique design and construction needs with exceptional results.`
