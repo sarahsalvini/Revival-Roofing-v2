@@ -22,7 +22,7 @@
 			class="block sm:hidden mb-1.5 text-navy font-semibold text-sm tracking-wider dark:text-white px-6 bg-transparent"
 			on:click={callNumber}
 		>
-			<i class="fa fa-phone mr-1"></i> (913) 210.1028
+			<i class="fa fa-phone mr-1"></i> (913) 210-1028
 		</button>
 	</div>
 	<Navbar bind:darkMode />
