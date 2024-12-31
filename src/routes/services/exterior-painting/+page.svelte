@@ -4,6 +4,12 @@
 
 <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-20">
 	<Content>
+		<img
+			slot="image"
+			class="sm:ml-0 ml-auto rounded-xl object-cover"
+			src="/roofing_photos/IMG_2195.PNG"
+			alt="installation "
+		/>
 		<h2 slot="title">Interior and Exterior Painting That Transforms Your Home</h2>
 		<p slot="description">
 			At Revival Roofing and Construction, we provide expert painting services to transform your

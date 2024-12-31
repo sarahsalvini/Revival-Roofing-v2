@@ -4,11 +4,7 @@
 <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
 	<div class="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
 		<div class="lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
-			<img
-				class="sm:ml-0 ml-auto rounded-xl object-cover"
-				src="/gallery/4.png"
-				alt="installation "
-			/>
+			<slot name="image"></slot>
 		</div>
 
 		<div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
