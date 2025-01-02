@@ -64,8 +64,12 @@
 								<h3 class="mb-2 text-lg font-medium leading-6 text-dark dark:text-white">
 									Contact
 								</h3>
+
 								<p class="text-dark dark:text-mercury">Mobile: +1 (913) 210-1028</p>
 								<p class="text-dark dark:text-mercury">E-Mail: info@revivalroofingkc.com</p>
+								<p class="text-dark dark:text-mercury">
+									Located: Overland Park & Kansas City Metro Area
+								</p>
 							</div>
 						</li>
 						<li class="flex">
