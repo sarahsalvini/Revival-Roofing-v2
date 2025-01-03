@@ -1,0 +1,14 @@
+{
+	"redirects": [
+		{
+			"source": "https://www.revivalroofingkc.com/:path*",
+			"destination": "https://revivalroofingkc.com/:path*",
+			"permanent": true
+		},
+		{
+			"source": "http://revivalroofingkc.com/:path*",
+			"destination": "https://revivalroofingkc.com/:path*",
+			"permanent": true
+		}
+	]
+}
