@@ -1,7 +1,7 @@
 <script>
 	import truncate from 'lodash.truncate';
 	const yelpURL = 'https://www.yelp.com/biz/revival-roofing-overland-park#reviews';
-	const googleURL = '';
+	// const googleURL = '';
 	let currentIndex = 0;
 	let testimonials = [
 		{
@@ -117,8 +117,11 @@
 
 							{#if testimonial.text.length > 320}
 								<br />
-								<a href={testimonial.url} target="_blank" class="text-primary underline"
-									>Read More</a
+								<a
+									href={testimonial.url}
+									target="_blank"
+									class="text-primary underline"
+									rel="noopener noreferrer">Hear the rest of {testimonial.name}'s experience</a
 								>
 							{/if}
 						</p>
