@@ -13,6 +13,10 @@
 
 <!-- COMMENT OUT NAV WHEN PUSHING -->
 
+<svelte:head>
+	<link rel="canonical" href={`https://www.revivalroofingkc.com${$page.url.pathname}`} />
+</svelte:head>
+
 <div class="sticky top-0 z-40 bg-white dark:bg-dark-4">
 	<div
 		class="flex items-end justify-end gap-8 pr-12 lg:pr-0 sm:flex lg:pr-0 whitespace-nowrap bg-transparent"

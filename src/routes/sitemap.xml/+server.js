@@ -1,5 +1,5 @@
 export const GET = async () => {
-	const baseUrl = 'https://revivalroofingkc.com';
+	const baseUrl = 'https://www.revivalroofingkc.com';
 
 	// List of static pages
 	const pages = ['', 'about', 'services', 'contact', 'gallery'];
