@@ -1,9 +1,0 @@
-{
-	"redirects": [
-		{
-			"source": "/:path*",
-			"destination": "https://www.revivalroofingkc.com/:path*",
-			"permanent": true
-		}
-	]
-}
