@@ -8,7 +8,7 @@
 			slot="image"
 			class="sm:ml-0 ml-auto rounded-xl object-cover"
 			src="/gallery/4.png"
-			alt="Roof Replacement Services - Expert Roof Replacements"
+			alt="Roof Replacement Services - "
 		/>
 		<h2 slot="title">Roof Replacements That Stand the Test of Time</h2>
 		<p slot="description">

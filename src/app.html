@@ -76,7 +76,7 @@
 		<link rel="preload" as="image" href="/roof_background.png" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
+	<body class="hidden-content" data-sveltekit-preload-data="hover">
 		<!-- Page Content -->
 		<header>
 			<h1>Professional Roofing Services in Overland Park, KS</h1>
@@ -113,3 +113,8 @@
 		%sveltekit.body%
 	</body>
 </html>
+<style>
+	.hidden-content {
+		display: none;
+	}
+</style>
