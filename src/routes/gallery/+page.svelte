@@ -1,15 +1,15 @@
 <script lang="ts">
-	import _ from 'lodash';
+	import cloneDeep from 'lodash.clonedeep';
 	import { galleryTabs, galleryImages } from '$lib/tools';
 	import Tabs from '$lib/components/Tabs/Tabs.svelte';
 
-	let activeImages = _.cloneDeep(galleryImages);
+	let activeImages = cloneDeep(galleryImages);
 
 	function filterImages(tab: string) {
 		if (tab === 'all') {
-			activeImages = _.cloneDeep(galleryImages);
+			activeImages = cloneDeep(galleryImages);
 		} else {
-			activeImages = _.cloneDeep(galleryImages.filter((image: any) => image.tab === tab));
+			activeImages = cloneDeep(galleryImages.filter((image: any) => image.tab === tab));
 		}
 		activeImages = activeImages;
 		return;

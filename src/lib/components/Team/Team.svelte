@@ -25,12 +25,16 @@
 	</div>
 	<div class="grid grid-cols-2 gap-4 mt-8">
 		<img
-			class="w-full rounded-lg h-[350px] object-cover"
+			height="350"
+			width="280"
+			class="w-full rounded-lg h-auto object-cover min-h-[350px]"
 			src="/roofing_photos/installation.jpg"
 			alt="office content 1"
 		/>
 		<img
-			class="mt-4 w-full lg:mt-10 rounded-lg h-[350px] object-cover"
+			height="350"
+			width="280"
+			class="mt-4 w-full lg:mt-10 rounded-lg h-auto min-h-[350px] object-cover"
 			src="/roofing_photos/roof_repair.jpg"
 			alt="office content 2"
 		/>

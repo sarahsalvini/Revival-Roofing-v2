@@ -1,5 +1,5 @@
 <script>
-	import _ from 'lodash';
+	import truncate from 'lodash.truncate';
 	const yelpURL = 'https://www.yelp.com/biz/revival-roofing-overland-park#reviews';
 	const googleURL = '';
 	let currentIndex = 0;
@@ -113,7 +113,7 @@
 							{/each}
 						</div>
 						<p class="text-base leading-8 mb-9 text-center">
-							{_.truncate(testimonial.text, { length: 320, separator: '...' })}
+							{truncate(testimonial.text, { length: 320, separator: '...' })}
 
 							{#if testimonial.text.length > 320}
 								<br />
