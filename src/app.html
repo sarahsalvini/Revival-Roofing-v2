@@ -7,6 +7,7 @@
 			name="description"
 			content="Revival Roofing offers professional roofing and construction services in Overland Park, KS. Call us today for quality craftsmanship and reliable service!"
 		/>
+		<meta name="google-site-verification" content="rWN1pWK87eGTR99okiCxawgffrjRZ6VvEzidbVauul0" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="canonical" href="https://www.revivalroofingkc.com/" />
 		<link rel="icon" href="%sveltekit.assets%/Powder_Bevel.png" />
@@ -24,9 +25,11 @@
 			property="og:description"
 			content="Revival Roofing offers professional roofing and construction services in Overland Park, KS. Call us today for quality craftsmanship and reliable service!"
 		/>
+		<meta property="og:locale" content="en_US" />
 		<meta property="og:image" content="https://i.imgur.com/Y8g32ex.jpg" />
 		<meta property="og:url" content="https://www.revivalroofingkc.com/" />
 		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Revival Roofing" />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta
@@ -219,7 +222,42 @@
 				]
 			}
 		</script>
-
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "WebPage",
+				"name": "Homepage",
+				"url": "https://www.revivalroofingkc.com/",
+				"description": "Revival Roofing provides expert roofing services in Overland Park and Kansas City.",
+				"mainEntity": {
+					"@type": "LocalBusiness",
+					"name": "Revival Roofing",
+					"image": "https://i.imgur.com/Y8g32ex.jpg",
+					"telephone": "+1 913-210-1028",
+					"email": "info@revivalroofingkc.com",
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": "Overland Park",
+						"addressRegion": "KS",
+						"postalCode": "66210",
+						"addressCountry": "US"
+					}
+				}
+			}
+		</script>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Website",
+				"name": "Revival Roofing",
+				"url": "https://www.revivalroofingkc.com/",
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://www.revivalroofingkc.com/search?q={search_term_string}",
+					"query-input": "required name=search_term_string"
+				}
+			}
+		</script>
 		<script type="application/ld+json">
 			{
 				"@context": "http://schema.org",
@@ -288,15 +326,39 @@
 				]
 			}
 		</script>
+
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
 			integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
 			crossorigin="anonymous"
 		></script>
-
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-T952D4ZF');
+		</script>
+		<!-- End Google Tag Manager -->
 		%sveltekit.head%
 	</head>
 	<body class="hidden-content" data-sveltekit-preload-data="hover">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-T952D4ZF"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<!-- Page Content -->
 		<header>
 			<h1>Professional Roofing Services in Overland Park, KS</h1>
