@@ -8,7 +8,7 @@
 			slot="image"
 			class="sm:ml-0 ml-auto rounded-xl object-cover"
 			src="/roofing_photos/storm_damage.png"
-			alt="installation "
+			alt="Roof Inspections - Storm Damage and Insurance Support"
 		/>
 		<h2 slot="title">Comprehensive Roof Inspections with Insurance Support</h2>
 		<p slot="description">

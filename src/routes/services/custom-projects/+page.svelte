@@ -8,7 +8,7 @@
 			slot="image"
 			class="sm:ml-0 ml-auto rounded-xl object-cover"
 			src="/roofing_photos/window_install.jpg"
-			alt="installation "
+			alt="Custom Projects - Window Installation"
 		/>
 		<h2 slot="title">Custom Projects Tailored to Your Vision</h2>
 		<p slot="description">

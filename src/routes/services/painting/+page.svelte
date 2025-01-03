@@ -8,7 +8,7 @@
 			slot="image"
 			class="sm:ml-0 ml-auto rounded-xl object-cover"
 			src="/roofing_photos/IMG_2195.PNG"
-			alt="installation "
+			alt="Painting Services - Interior and Exterior Painting"
 		/>
 		<h2 slot="title">Interior and Exterior Painting That Transforms Your Home</h2>
 		<p slot="description">

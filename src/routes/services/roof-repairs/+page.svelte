@@ -8,7 +8,7 @@
 			slot="image"
 			class="sm:ml-0 ml-auto rounded-xl object-cover"
 			src="/roofing_photos/roof_repair.jpg"
-			alt="installation "
+			alt="Roof Repairs - Shingle Roof Repair"
 		/>
 		<h2 slot="title">Trusted Shingle Roof Repair Specialists</h2>
 		<p slot="description">

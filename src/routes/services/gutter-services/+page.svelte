@@ -8,7 +8,7 @@
 			slot="image"
 			class="sm:ml-0 ml-auto rounded-xl object-cover"
 			src="/roofing_photos/gutter.jpg"
-			alt="installation "
+			alt="Gutter Services - Gutter Guard Installation"
 		/>
 		<h2 slot="title">Tailored Gutter Solutions for Superior Home Protection</h2>
 		<p slot="description">

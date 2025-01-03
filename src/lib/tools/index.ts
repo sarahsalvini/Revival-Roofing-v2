@@ -46,7 +46,7 @@ export let services = [
 	},
 	{
 		title: 'Painting Services',
-		link: '/services/exterior-painting',
+		link: '/services/painting',
 		icon: 'fas fa-paint-roller',
 		description: `Transform your property’s curb appeal with our professional painting services. We use premium paints and expert techniques to refresh and protect your home or business, ensuring a flawless and durable finish.`,
 		caption: `High-quality painting services to refresh your property’s appearance and protect it from the elements.`
