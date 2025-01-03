@@ -126,7 +126,7 @@
 					<span class="text-sm text-gray-500 dark:text-neutral-500">Want to work with us?</span>
 					<a
 						class="inline-flex items-center gap-x-2 text-sm font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:text-blue-500 dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600"
-						href="#"
+						href="/contact"
 					>
 						We are hiring
 						<svg

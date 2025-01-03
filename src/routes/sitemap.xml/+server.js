@@ -5,7 +5,7 @@ export const GET = async () => {
 	const pages = ['', 'about', 'services', 'contact', 'gallery'];
 	const services = [
 		{
-			site: 'services/roof-replacement',
+			site: 'services/roof-replacements',
 			image: '/gallery/4.png',
 			alt: 'Roof Replacement Services - Expert Roof Replacements'
 		},
