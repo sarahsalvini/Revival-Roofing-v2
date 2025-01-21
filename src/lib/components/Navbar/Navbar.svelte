@@ -102,7 +102,7 @@
 						class="absolute right-0 sm:right-4 top-full w-full mt-3 max-h-[80vh] flex-shrink-0 lg:max-h-[100vh] lg:overflow-visible overflow-y-auto max-w-[300px] rounded-lg px-6 py-5 shadow lg:px-0 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none bg-dark-2 lg:bg-transparent"
 						use:clickOutside
 						on:click_outside={() => {
-							if (!isMobile) {
+							if (!isMobile && showMegaMenu) {
 								toggleMegaMenu();
 							} else {
 								if (navbarOpen) {
@@ -153,7 +153,7 @@
 														<button
 															class="space-y-2 text-left"
 															on:click={() => {
-																if (!isMobile) {
+																if (!isMobile && showMegaMenu) {
 																	toggleMegaMenu();
 																} else {
 																	if (navbarOpen) {

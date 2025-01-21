@@ -100,6 +100,10 @@ export default {
 					clipPath: 'polygon(0% 0%, 0% 100%, 100% calc(100% - 5vw), 100% 0%)',
 					WebkitClipPath: 'polygon(0% 0%, 0% 100%, 100% calc(100% - 5vw), 100% 0%)'
 				},
+				'.custom-clip-opposite': {
+					clipPath: 'polygon(0% 0%, 0% calc(5vw), 100% 100%, 100% 0%)',
+					WebkitClipPath: 'polygon(0% 0%, 0% calc(5vw), 100% 100%, 100% 0%)'
+				},
 				// Section Two - Clip Path Full Width Arrow
 				'.custom-clip-two': {
 					clipPath:
