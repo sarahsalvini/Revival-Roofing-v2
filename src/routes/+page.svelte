@@ -8,10 +8,10 @@
 	import Testimonials from '$lib/components/Testimonials/Testimonials.svelte';
 
 	export function scrollToSection(e: string) {
-		const offsetPosition = document.querySelector(e)?.offsetTop - 100;
+		const offsetPosition = document.querySelector(e)?.offsetTop - 0;
 		window.scrollTo({
 			left: 0,
-			top: offsetPosition,
+			top: offsetPosition + 650,
 			behavior: 'smooth'
 		});
 	}

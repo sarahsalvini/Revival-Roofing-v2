@@ -27,7 +27,7 @@
 			<div class="grid md:grid-cols-2">
 				<div class="h-full pr-6">
 					<p
-						class="mt-3 mb-12 text-sm md:text-base text-center md:text-left lg:text-md text-dark-4 dark:text-mercury"
+						class="mt-3 mb-12 text-sm md:text-base lg:text-md text-center md:text-left text-dark-4 dark:text-mercury"
 					>
 						At Revival Roofing and Construction, we pride ourselves on providing top-quality roofing
 						solutions and exceptional customer service to the Kansas City metro area. Whether it's a
@@ -37,9 +37,7 @@
 					</p>
 					<ul class="mb-6 md:mb-0">
 						<li class="flex">
-							<div
-								class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50"
-							>
+							<div class="flex h-10 w-10 justify-center rounded bg-blue-900 text-gray-50">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="24"
@@ -60,22 +58,19 @@
 									<path d="M15 3a6 6 0 0 1 6 6"></path>
 								</svg>
 							</div>
-							<div class="ml-4 mb-4 text-left">
+							<div class="ml-2 mb-4 text-left">
 								<h3 class="mb-2 text-lg font-medium leading-6 text-dark dark:text-white">
 									Contact
 								</h3>
-
-								<p class="text-dark dark:text-mercury">Mobile: +1 (913) 210-1028</p>
-								<p class="text-dark dark:text-mercury">E-Mail: info@revivalroofingkc.com</p>
-								<p class="text-dark dark:text-mercury">
-									Located: Overland Park & Kansas City Metro Area
-								</p>
+								<div class="text-sm md:text-base lg:text-md">
+									<p class="text-dark dark:text-mercury">Mobile: +1 (913) 210-1028</p>
+									<p class="text-dark dark:text-mercury">E-Mail: info@revivalroofingkc.com</p>
+									<p class="text-dark dark:text-mercury">Located: Kansas City Metro Area</p>
+								</div>
 							</div>
 						</li>
 						<li class="flex">
-							<div
-								class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50"
-							>
+							<div class="flex h-10 w-10 justify-center rounded bg-blue-900 text-gray-50">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="24"
@@ -92,10 +87,12 @@
 									<path d="M12 7v5l3 3"></path>
 								</svg>
 							</div>
-							<div class="ml-4 mb-4">
+							<div class="ml-2 mb-4">
 								<h3 class="mb-2 text-lg font-medium leading-6 text-dark dark:text-white">Hours</h3>
-								<p class="text-dark dark:text-mercury">Monday - Saturday: 8:00 am - 6:00 pm</p>
-								<p class="text-dark dark:text-mercury">Sunday: 10:00 am - 5:00 pm</p>
+								<div class="text-sm md:text-base lg:text-md">
+									<p class="text-dark dark:text-mercury">Monday - Saturday: 8 am - 6 pm</p>
+									<p class="text-dark dark:text-mercury">Sunday: 10 am - 5 pm</p>
+								</div>
 							</div>
 						</li>
 					</ul>

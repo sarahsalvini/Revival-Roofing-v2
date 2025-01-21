@@ -19,14 +19,14 @@
 
 <div class="sticky top-0 z-40 bg-white dark:bg-dark-4">
 	<div
-		class="flex items-end justify-end gap-8 pr-12 lg:pr-0 sm:flex lg:pr-0 whitespace-nowrap bg-transparent"
+		class="flex-row-reverse md:flex-row flex items-end justify-between md:justify-end gap-8 md:pr-12 lg:pr-0 sm:flex lg:pr-0 whitespace-nowrap bg-transparent"
 	>
 		<ColorModeToggle bind:darkMode />
 		<button
-			class="block sm:hidden mb-1.5 text-navy font-semibold text-sm tracking-wider dark:text-white px-6 bg-transparent"
+			class="block sm:hidden mb-1.5 text-navy font-semibold text-sm tracking-wider dark:text-white md:px-6 bg-transparent"
 			on:click={callNumber}
 		>
-			<i class="fa fa-phone mr-1"></i> (913) 210-1028
+			<i class="fa fa-phone mr-1 ml-4 md:ml-0"></i> (913) 210-1028
 		</button>
 	</div>
 	<Navbar bind:darkMode />

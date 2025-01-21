@@ -1,5 +1,5 @@
 <script>
-	import { services } from '$lib/tools';
+	import { services, clickOutside } from '$lib/tools';
 	export let darkMode = true;
 	const serviceList = [
 		{
@@ -100,13 +100,26 @@
 						class:hidden={!navbarOpen}
 						id="navbarCollapse"
 						class="absolute right-0 sm:right-4 top-full w-full mt-3 max-h-[80vh] flex-shrink-0 lg:max-h-[100vh] lg:overflow-visible overflow-y-auto max-w-[300px] rounded-lg px-6 py-5 shadow lg:px-0 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none bg-dark-2 lg:bg-transparent"
+						use:clickOutside
+						on:click_outside={() => {
+							if (!isMobile) {
+								toggleMegaMenu();
+							} else {
+								if (navbarOpen) {
+									toggleNavbar();
+									toggleMegaMenu();
+								}
+							}
+						}}
 					>
 						<ul class="block lg:flex justify-end gap-6 relative">
 							{#each serviceList as service}
 								{#if service.submenu && service.submenu?.length}
 									<li>
 										<button
-											on:click={toggleMegaMenu}
+											on:click={() => {
+												toggleMegaMenu();
+											}}
 											class="uppercase tracking-wide font-semibold flex w-full items-center justify-between gap-2 py-2 text-base lg:inline-flex lg:w-auto lg:justify-center lg:text-dark text-white dark:text-white hover:text-powder dark:hover:text-powder"
 										>
 											{service.title}
@@ -137,10 +150,21 @@
 													class="grid gap-5 lg:grid-cols-2 lg:dark:bg-dark lg:bg-powder/50 lg:rounded-xl drop-shadow-2xl dark:shadow-dark shadow-lg"
 												>
 													{#each service.submenu as submenu}
-														<div class="space-y-2 text-left">
+														<button
+															class="space-y-2 text-left"
+															on:click={() => {
+																if (!isMobile) {
+																	toggleMegaMenu();
+																} else {
+																	if (navbarOpen) {
+																		toggleNavbar();
+																		toggleMegaMenu();
+																	}
+																}
+															}}
+														>
 															<a
 																href={submenu.link}
-																on:click={toggleMegaMenu}
 																class="group flex flex-col gap-4 rounded-lg p-4 duration-200 lg:flex-row text-white lg:dark:text-white lg:text-navy hover:text-powder dark:hover:text-powder lg:hover:text-[#3A94A8]"
 															>
 																<div class="">
@@ -157,7 +181,7 @@
 																	</p>
 																</div>
 															</a>
-														</div>
+														</button>
 													{/each}
 												</div>
 												<!-- --------------------------- -->

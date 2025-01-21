@@ -17,7 +17,7 @@
 	}
 </script>
 
-<div class="flex items-center justify-center mt-4 mr-8">
+<div class="flex items-center justify-center mt-4 md:mr-8 mr-4">
 	<input
 		checked={darkMode}
 		on:click={handleSwitchDarkMode}
