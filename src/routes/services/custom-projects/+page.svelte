@@ -19,7 +19,7 @@
 			alt="Custom Projects - Window Installation"
 		/>
 		<h2 slot="title">Custom Projects Tailored to Your Vision</h2>
-		<ul slot="list">
+		<ul slot="list" class="grid gap-3">
 			{#each customProjects as project}
 				<li>
 					<i class="text-lg {project.icon} mr-2 w-[25px]"></i>

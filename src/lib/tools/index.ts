@@ -41,8 +41,8 @@ export let services = [
 		title: 'Gutter Services',
 		link: '/services/gutter-services',
 		icon: 'fas fa-home',
-		description: `Our gutter services include installation, cleaning, and repairs to keep water flowing properly away from your home. Protect your foundation and landscaping from water damage with our reliable and efficient gutter solutions.`,
-		caption: `Reliable gutter installation, cleaning, and repair services to protect your property from water damage and ensure proper drainage.`
+		description: `Our gutter services include installation, replacement, and repairs to keep water flowing properly away from your home. Protect your foundation and landscaping from water damage with our reliable and efficient gutter solutions.`,
+		caption: `Reliable gutter installation, replacement, and repair services to protect your property from water damage and ensure proper drainage.`
 	},
 	{
 		title: 'Painting Services',

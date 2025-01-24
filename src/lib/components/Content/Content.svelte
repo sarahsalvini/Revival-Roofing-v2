@@ -1,14 +1,14 @@
 <script>
 </script>
 
-<div class="container mx-auto px-5 py-5 lg:px-32 lg:pt-16">
+<div class="container mx-auto px-5 py-5">
 	<div class="w-full max-w-7xl px-0 md:px-5 lg:px-5 mx-auto">
 		<div class="w-full justify-start gap-8 lg:gap-12 grid lg:grid-cols-2 grid-cols-1">
 			<div class="lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
 				<slot name="image"></slot>
 			</div>
 
-			<div class="w-full flex-col lg:items-start gap-10 inline-flex">
+			<div class="w-full flex-col lg:items-end gap-10 inline-flex">
 				<div class="w-full flex-col justify-center items-start gap-8 flex">
 					<div class="w-full flex-col justify-start lg:items-start gap-3 flex text-left">
 						<h2

@@ -26,7 +26,7 @@
 			<div class="w-full px-4 lg:w-1/2">
 				<div class="hero-content text-center lg:text-left m-auto animate-fade-in-down">
 					<h1
-						class="mb-5 text-white text-2xl font-bold !leading-[1.208] sm:text-[42px] lg:text-[32px] xl:text-5xl text-nowrap"
+						class="mb-5 text-white text-2xl font-bold !leading-[1.208] sm:text-[42px] lg:text-[32px] 2xl:text-5xl xl:text-4xl text-nowrap"
 					>
 						<span class="text-primary"><i>Revive</i></span> Your Roof,
 						<br />
@@ -67,39 +67,6 @@
 						<BevelCard><div slot="content"><HeroForm /></div></BevelCard>
 						<span class="absolute -bottom-8 -left-8 z-[-1] hidden md:block">
 							<DecrotiveSquareDots />
-							<!-- <svg
-								width="93"
-								height="93"
-								viewBox="0 0 93 93"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<circle cx="2.5" cy="2.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="2.5" cy="24.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="2.5" cy="46.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="2.5" cy="68.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="2.5" cy="90.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="24.5" cy="2.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="24.5" cy="24.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="24.5" cy="46.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="24.5" cy="68.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="24.5" cy="90.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="46.5" cy="2.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="46.5" cy="24.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="46.5" cy="46.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="46.5" cy="68.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="46.5" cy="90.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="68.5" cy="2.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="68.5" cy="24.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="68.5" cy="46.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="68.5" cy="68.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="68.5" cy="90.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="90.5" cy="2.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="90.5" cy="24.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="90.5" cy="46.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="90.5" cy="68.5" r="2.5" fill="#B8E3E9" />
-								<circle cx="90.5" cy="90.5" r="2.5" fill="#B8E3E9" />
-							</svg> -->
 						</span>
 					</div>
 				</div>

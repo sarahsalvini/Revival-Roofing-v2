@@ -191,6 +191,11 @@
 								{:else}
 									<li>
 										<a
+											on:click={() => {
+												if (navbarOpen) {
+													toggleNavbar();
+												}
+											}}
 											href={service.link}
 											class="tracking-wider uppercase whitespace-nowrap flex py-2 text-base font-semibold lg:inline-flex text-white lg:text-dark dark:text-white hover:text-powder dark:hover:text-powder"
 										>
