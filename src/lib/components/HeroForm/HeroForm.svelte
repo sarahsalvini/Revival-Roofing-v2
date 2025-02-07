@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { formInputs, handleEmailSubmit } from '$lib/tools';
 	let showError = false;
+	let saving = false;
 
 	function toggleError() {
 		showError = !showError;
@@ -11,9 +12,36 @@
 		email: '',
 		phone: '',
 		zipcode: '',
+		project: 'Residential',
 		contactMethod: 'Text',
 		message: ''
 	};
+
+	function isValidPhone(phone) {
+		const phoneRegex = /^[+]?[0-9\s\-()]{7,20}$/; // Updated to allow dashes, spaces, and parentheses
+		return phoneRegex.test(phone);
+	}
+
+	function isValidEmail(email) {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation
+		return emailRegex.test(email);
+	}
+
+	function isFormValid(data) {
+		return Object.entries(data).every(([key, value]) => {
+			if (typeof value !== 'string') return false; // Ensure value is a string
+			const trimmedValue = value.trim();
+			if (trimmedValue.length === 0) return false;
+
+			if (key === 'phone') {
+				const numericPhone = trimmedValue.replace(/[^0-9+]/g, ''); // Remove non-numeric characters except +
+				if (!isValidPhone(numericPhone)) return false;
+			}
+			if (key === 'email' && !isValidEmail(trimmedValue)) return false;
+
+			return true;
+		});
+	}
 </script>
 
 <h1 class="text-lg md:text-3xl font-bold mb-8 text-center text-white drop-shadow-[0_0_3px_#B8E3E9]">
@@ -24,7 +52,16 @@
 	id="form"
 	novalidate
 	on:submit={(e) => {
-		handleEmailSubmit(e, data);
+		e.preventDefault();
+		if (isFormValid(data)) {
+			saving = true;
+			handleEmailSubmit(e, data);
+			setTimeout(() => {
+				saving = false;
+			}, 1000);
+		} else {
+			console.log('Please fill in all fields before submitting.');
+		}
 	}}
 >
 	{#each formInputs as input}
@@ -49,9 +86,19 @@
 						>{input.title} is required</span
 					>
 				{/if}
+				{#if data[input.key] && input.key === 'phone' && !isValidPhone(data[input.key].trim())}
+					<span class="text-xs mt-3 text-red-600" class:hidden={!showError}
+						>{input.title} is not valid</span
+					>
+				{/if}
+				{#if data[input.key] && input.key === 'email' && !isValidEmail(data[input.key].trim())}
+					<span class="text-xs mt-3 text-red-600" class:hidden={!showError}
+						>{input.title} is not valid</span
+					>
+				{/if}
 			</div>
 		{:else if input.type === 'radio'}
-			<fieldset class="relative z-0 w-full p-px mb-6 pt-6">
+			<fieldset class="relative z-0 w-full p-px mb-2 pt-6">
 				<legend
 					class="absolute text-primary transform scale-75 -top-3 origin-0 block text-left text-md md:text-lg mt-4 md:text-nowrap"
 					>{input.title}</legend
@@ -92,7 +139,27 @@
 		type="submit"
 		on:click={toggleError}
 	>
-		Submit
+		{#if saving}
+			<div>
+				<svg
+					class="animate-spin h-5 w-5 text-gray-800 mx-auto"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+				>
+					<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
+					></circle>
+					<path
+						class="opacity-75"
+						fill="currentColor"
+						d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+					>
+					</path>
+				</svg>
+			</div>
+		{:else}
+			Submit
+		{/if}
 	</button>
 </form>
 

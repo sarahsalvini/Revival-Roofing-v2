@@ -5,17 +5,25 @@ export const formInputs = [
 	{ title: 'Phone', key: 'phone', type: 'input', required: true, hasError: false },
 	{ title: 'Zipcode', key: 'zipcode', type: 'input', required: true, hasError: false },
 	{
+		title: 'Project Type',
+		key: 'project',
+		type: 'radio',
+		options: ['Residential', 'Commercial'],
+		required: true,
+		hasError: false
+	},
+	{
 		title: 'Prefered Contact Method',
 		key: 'contactMethod',
 		type: 'radio',
 		options: ['Text', 'Call', 'Email'],
-		required: false,
+		required: true,
 		hasError: false
 	},
 	{ title: 'Message', key: 'message', type: 'textarea', required: false, hasError: false }
 ];
 
-export let services = [
+export const services = [
 	{
 		title: 'Roof Replacement',
 		link: '/services/roof-replacements',
@@ -60,7 +68,7 @@ export let services = [
 	}
 ];
 
-export let galleryTabs = [
+export const galleryTabs = [
 	{ title: 'All', key: 'all', active: true },
 	{ title: 'Roofing', key: 'installation', active: false },
 	{ title: 'Gutters', key: 'gutter', active: false },
@@ -83,6 +91,7 @@ export async function handleEmailSubmit(event, data) {
 
 		if (response.ok) {
 			alert('Email sent successfully!');
+			return 'success';
 		} else {
 			const error = await response.json();
 			alert('Failed to send email: ' + error.error);
