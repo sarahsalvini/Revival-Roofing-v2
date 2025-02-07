@@ -6,7 +6,7 @@ export async function POST({ request }) {
 	try {
 		const data = await request.json(); // Get form data from request body
 
-		const { name, email, phone, zipcode, contactMethod, message } = data;
+		const { name, email, phone, zipcode, project, contactMethod, message } = data;
 
 		// Configure Nodemailer with Gmail SMTP
 		const transporter = nodemailer.createTransport({
@@ -19,14 +19,16 @@ export async function POST({ request }) {
 
 		// Email content
 		const mailOptions = {
-			from: env.GMAIL_USER,
-			to: 'info@revivalroofingkc.com', // Recipient email
-			subject: 'New Contact Form Submission',
+			from: 'info@revivalroofingkc.com',
+			replyTo: email,
+			to: 'info@revivalroofingkc.com',
+			subject: 'Revial Roofing Project Inquiry',
 			text: `
                 Name: ${name}
                 Email: ${email}
                 Phone: ${phone}
                 Zipcode: ${zipcode}
+                Project Type: ${project}
                 Preferred Contact Method: ${contactMethod}
                 Message: ${message}
             `
