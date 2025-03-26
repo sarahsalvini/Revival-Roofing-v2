@@ -9,7 +9,7 @@
 		// { title: 'About Us', link: '/about' },
 		{ title: 'Gallery', link: '/gallery' },
 		// { title: 'Financing', link: '/financing' },
-		// { title: 'Careers', link: '/careers' },
+		{ title: 'Careers', link: '/careers' },
 		{ title: 'Contact', link: '/contact' }
 	];
 

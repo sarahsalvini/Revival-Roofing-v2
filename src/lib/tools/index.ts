@@ -23,6 +23,23 @@ export const formInputs = [
 	{ title: 'Message', key: 'message', type: 'textarea', required: false, hasError: false }
 ];
 
+export const applicationForm = [
+	{ title: 'First Name', key: 'firstName', type: 'input', required: true, hasError: false },
+	{ title: 'Last Name', key: 'lastName', type: 'input', required: true, hasError: false },
+	{ title: 'Email', key: 'email', type: 'input', required: true, hasError: false },
+	{ title: 'Phone', key: 'phone', type: 'input', required: true, hasError: false },
+	{ title: 'Resume', key: 'resume', type: 'file', required: true, hasError: false },
+	{
+		title: 'Prefered Contact Method',
+		key: 'contactMethod',
+		type: 'radio',
+		options: ['Text', 'Call', 'Email'],
+		required: true,
+		hasError: false
+	},
+	{ title: 'Personal note', key: 'message', type: 'textarea', required: false, hasError: false }
+];
+
 export const services = [
 	{
 		title: 'Roof Replacement',
@@ -83,10 +100,7 @@ export async function handleEmailSubmit(event, data) {
 	try {
 		const response = await fetch('/api/send-email', {
 			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(data)
+			body: data
 		});
 
 		if (response.ok) {

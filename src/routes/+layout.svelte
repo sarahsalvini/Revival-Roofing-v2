@@ -31,13 +31,13 @@
 	</div>
 	<Navbar bind:darkMode />
 </div>
-{#if $page.url.pathname !== '/'}
+{#if $page.url.pathname !== '/' && $page.url.pathname !== '/careers/field-rep'}
 	<div class="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8 lg:pt-6 pb-0">
 		<a
 			href="/"
 			class=" block text-left w-full text-navy dark:text-white font-semibold text-sm tracking-wider"
-			><i class="fa fa-arrow-left" /> Back</a
-		>
+			><i class="fa fa-arrow-left" /> Back
+		</a>
 	</div>
 {/if}
 <slot />

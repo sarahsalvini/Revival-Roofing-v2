@@ -18,6 +18,9 @@ npm create svelte@latest my-app
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
+nvm install --lts
+nvm use --lts
+
 ```bash
 npm run dev
 

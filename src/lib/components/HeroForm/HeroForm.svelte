@@ -42,6 +42,26 @@
 			return true;
 		});
 	}
+
+	function sendProjectEmail(e) {
+		const formData = new FormData();
+		formData.append('subject', `Revial Roofing Project Inquiry`);
+		formData.append('replyTo', data.email);
+		formData.append(
+			'text',
+			`Name: ${data.name}
+		            Email: ${data.email}
+		            Phone: ${data.phone}
+		            Zipcode: ${data.zipcode}
+		            Project Type: ${data.project}
+		            Preferred Contact Method: ${data.contactMethod}
+		            Message: ${data.message}
+		        `
+		);
+
+		handleEmailSubmit(e, formData);
+		return;
+	}
 </script>
 
 <h1 class="text-lg md:text-3xl font-bold mb-8 text-center text-white drop-shadow-[0_0_3px_#B8E3E9]">
@@ -55,7 +75,7 @@
 		e.preventDefault();
 		if (isFormValid(data)) {
 			saving = true;
-			handleEmailSubmit(e, data);
+			sendProjectEmail(e);
 			setTimeout(() => {
 				saving = false;
 			}, 1000);

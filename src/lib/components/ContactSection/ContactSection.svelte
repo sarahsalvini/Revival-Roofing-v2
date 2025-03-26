@@ -41,6 +41,26 @@
 			return true;
 		});
 	}
+
+	function sendProjectEmail(e) {
+		const formData = new FormData();
+		formData.append('subject', `Revial Roofing Project Inquiry`);
+		formData.append('replyTo', data.email);
+		formData.append(
+			'text',
+			`Name: ${data.name}
+		            Email: ${data.email}
+		            Phone: ${data.phone}
+		            Zipcode: ${data.zipcode}
+		            Project Type: ${data.project}
+		            Preferred Contact Method: ${data.contactMethod}
+		            Message: ${data.message}
+		        `
+		);
+
+		handleEmailSubmit(e, formData);
+		return;
+	}
 </script>
 
 <section class="bg-white dark:bg-dark-4" id="contact">
@@ -137,7 +157,7 @@
 							e.preventDefault();
 							if (isFormValid(data)) {
 								saving = true;
-								handleEmailSubmit(e, data);
+								sendProjectEmail(e);
 								setTimeout(() => {
 									saving = false;
 								}, 1000);
@@ -185,9 +205,7 @@
 												<div>{input.title}</div>
 												<div class="block py-2 space-x-6 text-left">
 													{#each input.options as option}
-														<label
-															class="text-white text-sm md:text-md text-dark dark:text-mercury"
-														>
+														<label class="text-sm md:text-md text-dark dark:text-mercury">
 															<input
 																id={option}
 																type="radio"

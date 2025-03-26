@@ -4,37 +4,43 @@ import { env } from '$env/dynamic/private';
 /** @type {import('./$types').RequestHandler} */
 export async function POST({ request }) {
 	try {
-		const data = await request.json(); // Get form data from request body
+		const formData = await request.formData();
+		const subject = formData.get('subject');
+		const text = formData.get('text');
+		const replyTo = formData.get('replyTo');
+		const resume = formData.get('resume');
 
-		const { name, email, phone, zipcode, project, contactMethod, message } = data;
+		// Initialize attachments array
+		const attachments = [];
 
-		// Configure Nodemailer with Gmail SMTP
+		// Handle resume (required)
+		if (resume && typeof resume.arrayBuffer === 'function') {
+			const buffer = await resume.arrayBuffer();
+			attachments.push({
+				filename: resume.name,
+				content: Buffer.from(buffer),
+				contentType: resume.type
+			});
+		}
+
+		// Create transporter
 		const transporter = nodemailer.createTransport({
 			service: 'gmail',
 			auth: {
-				user: env.GMAIL_USER, // Your Gmail address
-				pass: env.GMAIL_PASS // Your Gmail App Password
+				user: env.GMAIL_USER,
+				pass: env.GMAIL_PASS
 			}
 		});
 
-		// Email content
 		const mailOptions = {
 			from: 'info@revivalroofingkc.com',
-			replyTo: email,
 			to: 'info@revivalroofingkc.com',
-			subject: 'Revial Roofing Project Inquiry',
-			text: `
-                Name: ${name}
-                Email: ${email}
-                Phone: ${phone}
-                Zipcode: ${zipcode}
-                Project Type: ${project}
-                Preferred Contact Method: ${contactMethod}
-                Message: ${message}
-            `
+			subject,
+			text,
+			replyTo: replyTo || 'info@revivalroofingkc.com',
+			attachments
 		};
 
-		// Send email
 		await transporter.sendMail(mailOptions);
 
 		return new Response(JSON.stringify({ message: 'Email sent successfully!' }), {
