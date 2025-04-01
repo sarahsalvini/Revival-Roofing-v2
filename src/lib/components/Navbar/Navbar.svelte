@@ -19,6 +19,8 @@
 
 	function toggleNavbar() {
 		navbarOpen = !navbarOpen;
+
+		console.log('toggleNavbar', navbarOpen);
 	}
 
 	function toggleMegaMenu() {
@@ -31,8 +33,8 @@
 <svelte:window bind:innerWidth={w} />
 
 <div class="bg-white dark:bg-dark-4 shadow-md dark:shadow-md">
-	<div class="container">
-		<div class="relative flex items-center justify-between">
+	<div class="container relative">
+		<div class=" flex items-center justify-between">
 			<div class="xl:w-full w-80 max-w-full">
 				<a href="/" class="block w-full lg:max-w-[300px] py-5 lg:py-0">
 					{#if darkMode}
@@ -78,10 +80,14 @@
 						>
 					</div>
 					<button
-						on:click={toggleNavbar}
+						on:click={() => {
+							if (!navbarOpen) {
+								toggleNavbar();
+							}
+						}}
 						class:navbarTogglerActive={navbarOpen}
 						id="navbarToggler"
-						class="absolute right-0 top-1/2 block -translate-y-1/2 rounded-lg md:px-3 py-[6px] lg:hidden"
+						class="absolute right-0 top-1/2 block -translate-y-1/2 rounded-lg md:px-3 py-[6px] lg:hidden mr-8"
 					>
 						<span
 							class="relative my-[6px] block h-[2px] w-[30px] bg-navy dark:bg-white transition-all duration-500 ease-in-out opacity-100
@@ -104,17 +110,18 @@
 						on:click_outside={() => {
 							if (!isMobile && showMegaMenu) {
 								toggleMegaMenu();
-							} else {
-								if (navbarOpen) {
+							}
+
+							if (isMobile && navbarOpen) {
+								setTimeout(() => {
 									toggleNavbar();
-									toggleMegaMenu();
-								}
+								}, 100);
 							}
 						}}
 					>
-						<ul class="block lg:flex justify-end gap-6 relative">
+						<ul class="block lg:flex justify-end gap-6">
 							{#each serviceList as service}
-								{#if service.submenu && service.submenu?.length}
+								{#if service.submenu && service.submenu?.length && !isMobile}
 									<li>
 										<button
 											on:click={() => {
@@ -138,16 +145,16 @@
 												</svg>
 											</span>
 										</button>
-										<div class="lg:absolute lg:left-0 lg:top-[60px]">
+										<div class="lg:absolute lg:right-0 lg:top-[160px]">
 											<div
 												class:hidden={!showMegaMenu}
 												class:desktop={!isMobile && darkMode}
 												class:whiteDesktop={!isMobile && !darkMode}
-												class="w-full rounded-xl lg:dark:bg-dark-4 lg:bg-bone bg-dark-4 p-2 xl:w-[650px] lg:w-[550px] lg:p-8 lg:border-t-[12px] lg:dark:border-powder lg:border-navy dark:shadow-powder/10 shadow-md"
+												class="w-full rounded-xl lg:dark:bg-dark-4 lg:bg-bone bg-dark-4 p-2 xl:w-[80vw] lg:p-8 lg:border-t-[12px] lg:dark:border-powder lg:border-navy dark:shadow-powder/10 shadow-md"
 											>
 												<!-- Inner submenu list wrapper -->
 												<div
-													class="grid gap-5 lg:grid-cols-2 lg:dark:bg-dark lg:bg-powder/50 lg:rounded-xl drop-shadow-2xl dark:shadow-dark shadow-lg"
+													class="grid gap-3 lg:grid-cols-3 lg:dark:bg-dark lg:bg-powder/50 lg:rounded-xl drop-shadow-2xl dark:shadow-dark shadow-lg"
 												>
 													{#each service.submenu as submenu}
 														<button
@@ -172,7 +179,7 @@
 																</div>
 																<div>
 																	<h3
-																		class="tracking-widest uppercase mb-1 text-sm font-semibold duration-200"
+																		class="tracking-widest uppercase text-sm font-semibold duration-200"
 																	>
 																		{submenu.title}
 																	</h3>
@@ -183,10 +190,45 @@
 															</a>
 														</button>
 													{/each}
+													<button
+														class="border-t-2 mx-4 duration-200 lg:flex-row border-dark lg:dark:border-powder"
+														on:click={() => {
+															if (!isMobile && showMegaMenu) {
+																toggleMegaMenu();
+															} else {
+																if (navbarOpen) {
+																	toggleNavbar();
+																	toggleMegaMenu();
+																}
+															}
+														}}
+													>
+														<a href="/services">
+															<h3
+																class="text-left tracking-widest uppercase text-sm font-semibold duration-200 lg:dark:text-white lg:text-navy hover:text-powder dark:hover:text-powder lg:hover:text-[#3A94A8]"
+															>
+																View All Services <i class="fas fa-long-arrow-right"></i>
+															</h3></a
+														>
+													</button>
 												</div>
 												<!-- --------------------------- -->
 											</div>
 										</div>
+									</li>
+								{:else if isMobile && service.title === 'Services'}
+									<li>
+										<a
+											on:click={() => {
+												if (navbarOpen) {
+													toggleNavbar();
+												}
+											}}
+											href="/services"
+											class="tracking-wider uppercase whitespace-nowrap flex py-2 text-base font-semibold lg:inline-flex text-white lg:text-dark dark:text-white hover:text-powder dark:hover:text-powder"
+										>
+											{service.title}
+										</a>
 									</li>
 								{:else}
 									<li>
