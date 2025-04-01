@@ -1,7 +1,8 @@
 <script>
 	import truncate from 'lodash.truncate';
 	const yelpURL = 'https://www.yelp.com/biz/revival-roofing-overland-park#reviews';
-	// const googleURL = '';
+	const googleURL =
+		'https://www.google.com/search?sca_esv=02a19ff6f2f64912&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzU3CN5XUiwL9m-iEoXUW49DhZ5uUZf23lHFhP2wASoH2X2MzN4YS2R8eTRPUoqKKYltuFFkqu-WxvIuTvyRY2216jynq&q=Revival+Roofing+Reviews&sa=X&ved=2ahUKEwil5LXgtbeMAxWAkYkEHVKMDV0Q0bkNegQIIxAD&biw=1415&bih=732&dpr=2';
 	let currentIndex = 0;
 	let testimonials = [
 		{
@@ -24,6 +25,20 @@
 			text: "We couldn't be happier with the work Revival Roofing did for us! They handled our new roof, new gutters, new paint, replaced our skylight and everything turned out amazing!! Working with Jake was more than I expected. I usually dread having work done on our house but he was excited, organized, and always on time. He made the process surprisingly fun (which isn't something I ever expected to say about home renovations!).",
 			rating: 5,
 			url: yelpURL
+		},
+		{
+			name: 'Helina K.',
+			project: 'Roof Replacement',
+			text: 'They were professional and did an excellent job. Left the yard clean and meticulous after all the work.',
+			rating: 5,
+			url: googleURL
+		},
+		{
+			name: 'Jennifer K.',
+			project: 'Roof Replacement',
+			text: 'So happy with the roof and the work that was done! This company is amazing and so easy to work with! 100% recommend!!!! If I could give more than 5 stars I would!',
+			rating: 5,
+			url: googleURL
 		}
 	];
 

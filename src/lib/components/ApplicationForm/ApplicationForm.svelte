@@ -163,7 +163,7 @@
 								required={input.required}
 								bind:value={data[input.key]}
 								on:change={(e) => (data[input.key] = e.target.files[0])}
-								class="mb-2 w-full py-2 pl-2 pr-4 dark:text-gray-300 sm:mb-0"
+								class=" w-full py-2 pl-2 pr-4 dark:text-gray-300 sm:mb-0"
 								name={input.key}
 								class:text-red-600={showError}
 							/>
