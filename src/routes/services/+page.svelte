@@ -21,7 +21,6 @@
 		},
 		{
 			title: 'Fence Installation',
-			contact: true,
 			icon: 'fas fa-border-style',
 			description: `Enhance privacy, security, and curb appeal with our professional fence installation services. We offer a wide range of materials and styles to complement your property and meet your functional needs.`,
 			caption: `Durable, stylish fencing solutions for added privacy, safety, and aesthetic value.`,

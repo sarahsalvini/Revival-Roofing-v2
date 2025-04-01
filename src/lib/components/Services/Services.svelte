@@ -13,20 +13,20 @@
 						Our Services
 					</h2>
 					<p class="text-sm md:text-base text-body-color dark:text-white">
-						At Revival Roofing we offer a wide range of services to protect and enhance your home.
-						From roof repairs and inspections after Midwest storms to custom interior and exterior
-						projects, we’re here to meet your unique needs. We also work with your insurance company
-						to simplify the claims process, ensuring your home is safe, secure, and beautifully
-						customized.
+						At Revival Roofing, our Class B license allows us to offer a wide range of services to
+						protect, repair, and enhance your home — inside and out. From roof repairs and storm
+						inspections to full interior remodels and custom exterior projects, we’re equipped to
+						handle it all. We also work directly with your insurance company to simplify the claims
+						process, making sure your home is safe, secure, and tailored to your vision.
 					</p>
 					<div class="mt-6">
-						<a href="/gallery" class="btn-primary btn-large">View Projects</a>
+						<a href="/services" class="btn-primary btn-large">View All Services</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="-mx-3 flex flex-wrap text-left gap-y-5">
-			{#each services as service}
+			{#each services.slice(0, 5) as service}
 				<a class="w-full px-4 md:w-1/2 lg:w-1/3" href={service.link}>
 					<div
 						class=" rounded-[20px] bg-bone p-5 shadow-2 hover:shadow-lg md:px-6 xl:px-8 dark:bg-dark-4 lg:min-h-[80px] h-full"
@@ -47,6 +47,25 @@
 					</div>
 				</a>
 			{/each}
+
+			<a class="w-full px-4 md:w-1/2 lg:w-1/3" href="/services">
+				<div
+					class=" rounded-[20px] bg-bone p-5 shadow-2 hover:shadow-lg md:px-6 xl:px-8 dark:bg-dark-4 lg:min-h-[80px] h-full"
+				>
+					<div
+						class="mb-4 md:mb-6 lg:mb-8 flex h-[40px] w-[40px] md:h-[40px] md:w-[40px] lg:h-[60px] lg:w-[60px] items-center justify-center rounded lg:rounded-2xl bg-dark-4 text-white dark:bg-powder dark:text-navy"
+					>
+						<i class="fas fa-border-style md:text-2xl lg:text-3xl" />
+					</div>
+					<h4 class="mb-3 md:text-lg lg:text-xl font-semibold text-dark dark:text-white uppercase">
+						View All Services <i class="fas fa-long-arrow-right" />
+					</h4>
+					<p class="text-body-color dark:text-white text-xs">
+						We offer a wide range of services beyond what's listed here. Explore everything we have
+						to offer or reach out to us directly — we're here to help bring your project to life.
+					</p>
+				</div>
+			</a>
 		</div>
 	</div>
 </div>
